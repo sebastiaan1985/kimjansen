@@ -48,15 +48,6 @@ export default function HomePage() {
 
         <div className="container-prose relative z-10 py-24 md:py-32 w-full">
           <div className="max-w-2xl fade-up">
-            {/* Availability chip */}
-            <p className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 rounded-full bg-[var(--color-cream-50)]/70 backdrop-blur border border-[var(--color-taupe-100)] text-[12px] tracking-wide text-[var(--color-ink-soft)]">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-[var(--color-sage-300)] opacity-60 animate-ping" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--color-sage-300)]" />
-              </span>
-              Open voor nieuwe gesprekken — antwoord binnen 1 werkdag
-            </p>
-
             <h1 className="display text-[2.6rem] sm:text-6xl md:text-7xl leading-[1.02] text-[var(--color-ink)] drop-shadow-[0_1px_0_rgba(246,241,232,0.6)]">
               Herinneringen{" "}
               <em className="font-[family-name:var(--font-cormorant)] italic font-light text-[var(--color-rose-300)]">
