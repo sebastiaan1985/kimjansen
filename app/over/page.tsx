@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Ornament from "@/components/Ornament";
 import ImageCard from "@/components/ImageCard";
+import HeroVideo from "@/components/HeroVideo";
 
 export const metadata = {
   title: "Over Kim — Atelier Kim Jansen",
@@ -27,21 +28,7 @@ export default function OverPage() {
       <section className="bg-[var(--color-cream-50)] pb-20 md:pb-28">
         <div className="container-prose grid md:grid-cols-[1fr_1.3fr] gap-12 md:gap-20 items-start">
           <div className="md:sticky md:top-28">
-            <div className="relative aspect-[3/4] rounded-[var(--radius-lg)] overflow-hidden shadow-[var(--shadow-soft-lg)]"
-                 style={{ background: "linear-gradient(160deg, #f4e6e1 0%, #ddd2bf 50%, #c8cfbb 100%)" }}>
-              <svg viewBox="0 0 300 400" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice">
-                <g fill="none" stroke="#8e7c64" strokeWidth="0.8" opacity="0.45">
-                  <circle cx="150" cy="170" r="80" />
-                  <path d="M90 290 Q 150 240, 210 290 L 210 400 L 90 400 Z" fill="#b9a78e" fillOpacity="0.4" stroke="none" />
-                </g>
-                <text x="150" y="180" textAnchor="middle" className="font-[family-name:var(--font-caveat)]" fontSize="32" fill="#6a5a47">
-                  Kim
-                </text>
-              </svg>
-              <p className="absolute bottom-3 left-4 right-4 text-xs text-[var(--color-ink-mute)]/80">
-                [foto van Kim — wordt nog toegevoegd]
-              </p>
-            </div>
+            <HeroVideo src="/kim.mp4" aspect="portrait" />
             <p className="mt-5 font-[family-name:var(--font-caveat)] text-2xl text-[var(--color-rose-300)]">
               Hoi, ik ben Kim.
             </p>
