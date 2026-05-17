@@ -109,8 +109,8 @@ export default function ContactPage() {
               <ul className="space-y-3 text-[15px]">
                 <li>
                   <span className="block eyebrow mb-1">Mail</span>
-                  <a className="link-underline" href="mailto:hallo@atelierkimjansen.nl">
-                    hallo@atelierkimjansen.nl
+                  <a className="link-underline" href="mailto:info@atelierkimjansen.nl">
+                    info@atelierkimjansen.nl
                   </a>
                 </li>
                 <li>

@@ -36,8 +36,8 @@ export default function Footer() {
           <h4 className="eyebrow mb-4">Contact</h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="mailto:hallo@atelierkimjansen.nl" className="link-underline">
-                hallo@atelierkimjansen.nl
+              <a href="mailto:info@atelierkimjansen.nl" className="link-underline">
+                info@atelierkimjansen.nl
               </a>
             </li>
             <li>

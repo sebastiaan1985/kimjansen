@@ -62,7 +62,7 @@ const businessJsonLd = {
     "Persoonlijke herinneringsproducten gemaakt van geliefde kleding — jasjes, dekens, kussens en sjaals voor wie iemand heeft verloren.",
   url: "https://atelierkimjansen.nl",
   telephone: "+31610137351",
-  email: "hallo@atelierkimjansen.nl",
+  email: "info@atelierkimjansen.nl",
   image: "https://atelierkimjansen.nl/og.jpg",
   address: {
     "@type": "PostalAddress",

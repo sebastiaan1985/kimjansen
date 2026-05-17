@@ -53,8 +53,8 @@ export default function PrivacyPage() {
           <p>
             Je hebt het recht om je gegevens in te zien, te corrigeren of te
             laten verwijderen. Stuur een mail naar{" "}
-            <a className="link-underline" href="mailto:hallo@atelierkimjansen.nl">
-              hallo@atelierkimjansen.nl
+            <a className="link-underline" href="mailto:info@atelierkimjansen.nl">
+              info@atelierkimjansen.nl
             </a>{" "}
             en ik handel het binnen twee weken af.
           </p>
