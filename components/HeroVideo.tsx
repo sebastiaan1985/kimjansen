@@ -38,6 +38,9 @@ export default function HeroVideo({
   const containerClass = isFill
     ? `${aspectMap.fill} overflow-hidden ${className}`
     : `relative ${aspectMap[aspect]} overflow-hidden rounded-[var(--radius-xl)] shadow-[var(--shadow-soft-lg)] ${className}`;
+  const videoClass = isFill
+    ? "absolute inset-0 w-full h-full object-cover scale-[1.12] object-[46%_44%]"
+    : "absolute inset-0 w-full h-full object-cover";
 
   return (
     <div className={containerClass} aria-hidden>
@@ -60,7 +63,7 @@ export default function HeroVideo({
         muted
         playsInline
         preload="auto"
-        className="absolute inset-0 w-full h-full object-cover"
+        className={videoClass}
       />
 
       {/* warm cream wash to harmonize the footage with the site palette */}
