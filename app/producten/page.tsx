@@ -1,48 +1,67 @@
 import Link from "next/link";
 import ImageCard from "@/components/ImageCard";
 import Ornament from "@/components/Ornament";
+import Reveal from "@/components/Reveal";
 
 export const metadata = {
   title: "Producten — Atelier Kim Jansen",
-  description: "Herinneringsjasjes, dekens, kussens, sjaals en maatwerk. Een overzicht van wat ik maak.",
+  description:
+    "Herinneringsjasjes, dekens, kussens en tassen — handgemaakt van kleding van wie je dierbaar was. Met maatwerk en zorg & garantie.",
 };
 
 const products = [
   {
     title: "Herinneringsjasjes",
-    sub: "Spijker · leer · katoen",
+    sub: "Spijker · katoen",
     tone: "rose" as const,
     pattern: "botanical" as const,
-    body: "Een jasje gemaakt van of met kleding van iemand die er niet meer is. Of een jasje voor jezelf, met daarin stof, knopen, voering die een verhaal dragen. Spijkerjasje, blazer, bomber — wat past bij wie het gaat dragen.",
-    details: ["Maatwerk in jouw maat", "Geborduurde details mogelijk", "Knopen, labels of zakken van de originele kleding"],
-    price: "vanaf € 295",
+    body: "Een jasje dat een verhaal met zich meedraagt. Een spijkerjasje, blazer of ander katoenen jasje wordt voorzien van zorgvuldig gekozen stukken kleding die een bijzondere betekenis hebben. Door middel van patchwork verwerk ik de stoffen tot een uniek ontwerp dat past bij de persoon die het gaat dragen. Zo ontstaat een draagbare herinnering waarin stoffen, kleuren en details samenkomen.",
+    details: [
+      "Maatwerk in jouw maat",
+      "Knopen, labels of andere details uit de originele kleding kunnen worden verwerkt",
+    ],
+    price: "vanaf € 595,-",
   },
   {
     title: "Herinneringsdekens",
-    sub: "Quilt · patchwork · gevoerd",
+    sub: "Warm · persoonlijk · samen",
     tone: "sage" as const,
     pattern: "weave" as const,
-    body: "Een deken waarin alle kleding samenkomt. Overhemden van vader, blouses van moeder, T-shirts van een broer — een patchwork dat onder je armen past, in de auto, op de bank. Zacht gevoerd, met aandacht voor de naden.",
-    details: ["Tafelkleedformaat tot 2-persoonsformaat", "Achterzijde in egale stof of fleece", "Eventueel handgeborduurde naam of datum"],
-    price: "vanaf € 425",
+    body: "Een deken waarin herinneringen samenkomen. Overhemden van vader, blouses van moeder, T-shirts van een broer — kleding die te waardevol is om weg te doen, verwerkt in een warm en persoonlijk patchwork. Een herinnering die je kunt vasthouden, om je heen kunt slaan of een mooie plek kunt geven in huis.",
+    details: [
+      "Standaardformaat: 90 × 200 cm (eenpersoons)",
+      "Andere formaten mogelijk in overleg",
+      "Achterzijde katoen, dit kan ook een dekbedovertrek zijn",
+    ],
+    price: "vanaf € 1.195,-",
   },
   {
     title: "Herinneringskussens",
     sub: "Klein · dichtbij · zacht",
     tone: "taupe" as const,
     pattern: "stitch" as const,
-    body: "Een kussen om aan vast te houden. Vaak gemaakt van één bijzonder kledingstuk — een lievelingsblouse, een trui die nog naar hem rook. Kleiner formaat, met aandacht voor het detail. Soms met een knoop van het origineel.",
-    details: ["35×35 of 45×45 cm", "Met of zonder vulling", "Originele knoop of zak verwerkt"],
-    price: "vanaf € 145",
+    body: "Een kussen om vast te houden, tegen je aan te trekken of een mooie plek in huis te geven. Gemaakt van één of meerdere kledingstukken die een bijzondere betekenis hebben. Soms rustig en eenvoudig, soms verwerkt in een patchwork van verschillende stoffen. Altijd met aandacht voor de herinneringen die erin verweven zitten.",
+    details: [
+      "Formaat in overleg",
+      "Patchwork of verwerkt uit één kledingstuk",
+      "Originele knopen, labels of andere details kunnen worden verwerkt",
+      "Inclusief binnenkussen en rits aan de onderzijde",
+    ],
+    price: "vanaf € 225,-",
+    priceNote: "Samen met een deken gemaakt: vanaf € 175,- per kussen",
   },
   {
-    title: "Herinneringssjaals",
-    sub: "Om je heen · mee te nemen",
+    title: "Herinneringstassen",
+    sub: "Draagbaar · persoonlijk · tijdloos",
     tone: "cream" as const,
     pattern: "flower" as const,
-    body: "Iets om om je schouders te slaan in de auto, op het werk, op een dag dat het zwaar is. Lichter dan een deken, dichterbij dan een jasje. Vaak gemaakt van zachtere stoffen — overhemden van katoen, blouses van zijde.",
-    details: ["Smal of breed model", "Eventueel met handgenaaide rand", "Geschikt voor dagelijks dragen"],
-    price: "vanaf € 175",
+    body: "Een tas die je iedere dag met je mee kunt dragen. Gemaakt van kleding die een bijzondere betekenis heeft, verwerkt in een uniek patchwork van herinneringen. Zo krijgen dierbare stoffen een nieuwe plek in het dagelijks leven. Iedere tas wordt op maat ontworpen, passend bij de kleding, de herinneringen en jouw wensen. Originele details zoals knopen, labels, zakken of andere herkenbare elementen kunnen worden verwerkt, zodat het verhaal zichtbaar blijft in het eindresultaat.",
+    details: [
+      "Formaat in overleg",
+      "Gemaakt met patchwork van één of meerdere kledingstukken",
+      "Binnenzijde voorzien van praktische vakken",
+    ],
+    price: "vanaf € 795,-",
   },
 ];
 
@@ -61,9 +80,9 @@ export default function ProductenPage() {
           </h1>
           <p className="mt-8 max-w-2xl text-[1.05rem] leading-[1.85]">
             Dit zijn de producten waar de meeste gesprekken bij beginnen. Maar
-            het kan ook iets anders worden — een wandkleed, een tas, een
-            babydeken voor een kleinkind dat oma nooit heeft gekend. In het
-            gesprek voelen we wat past.
+            het kan ook iets anders worden — een wandkleed, een babydeken voor
+            een kleinkind, of iets wat nog geen vorm heeft. In het gesprek
+            voelen we wat past.
           </p>
         </div>
       </section>
@@ -76,8 +95,9 @@ export default function ProductenPage() {
       <section className="bg-[var(--color-cream-50)] pt-16 md:pt-24 pb-12">
         <div className="container-prose space-y-24 md:space-y-32">
           {products.map((p, i) => (
-            <article
+            <Reveal
               key={p.title}
+              as="article"
               className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center ${
                 i % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""
               }`}
@@ -99,37 +119,53 @@ export default function ProductenPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between pt-4 border-t border-[var(--color-taupe-100)]">
-                  <span className="font-[family-name:var(--font-cormorant)] italic text-xl text-[var(--color-ink)]">
-                    {p.price}
-                  </span>
-                  <Link href="/contact" className="link-underline text-sm tracking-wide">
-                    Bespreek de mogelijkheden →
-                  </Link>
+                <div className="pt-4 border-t border-[var(--color-taupe-100)] space-y-2">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="font-[family-name:var(--font-cormorant)] italic text-xl text-[var(--color-ink)]">
+                      {p.price}
+                    </span>
+                    <Link href="/contact" className="link-underline text-sm tracking-wide">
+                      Bespreek de mogelijkheden →
+                    </Link>
+                  </div>
+                  {p.priceNote && (
+                    <p className="text-xs text-[var(--color-ink-mute)] italic">
+                      {p.priceNote}
+                    </p>
+                  )}
                 </div>
               </div>
-            </article>
+            </Reveal>
           ))}
         </div>
       </section>
 
-      {/* MAATWERK */}
+      {/* MAATWERK — "Nog niet zeker wat bij je past?" */}
       <section className="bg-[var(--color-rose-50)] py-24 md:py-32 mt-16">
         <div className="container-prose">
-          <div className="grid md:grid-cols-[1fr_1.3fr] gap-12 md:gap-20 items-start">
+          <Reveal className="grid md:grid-cols-[1fr_1.3fr] gap-12 md:gap-20 items-start">
             <div>
               <Ornament variant="flourish" className="w-16 h-16 mb-6" />
-              <p className="eyebrow mb-4">Iets anders in gedachten?</p>
+              <p className="eyebrow mb-4">Nog niet zeker wat bij je past?</p>
               <h2 className="display text-3xl md:text-5xl leading-[1.05]">
-                Niet elk verhaal past in vier vormen.
+                Dat is{" "}
+                <em className="font-[family-name:var(--font-cormorant)] italic text-[var(--color-rose-300)] font-light">
+                  helemaal niet erg.
+                </em>
               </h2>
             </div>
             <div className="space-y-5 text-[1.05rem] leading-[1.85]">
               <p>
-                Een tas die jouw moeder gemaakt zou kunnen hebben. Een
-                wandkleed boven het bed van je vader. Een babydeken voor een
-                kleinkind dat hem nooit zal kennen. Een kostuum dat je opa
-                droeg, omgevormd tot iets dat zijn dochter kan dragen.
+                Ben jij er nog niet helemaal uit welk product bij jou past?
+                Vaak valt tijdens een gesprek de puzzel in elkaar en ontdekken
+                we samen welke vorm het beste aansluit bij jouw herinneringen
+                en wensen.
+              </p>
+              <p>
+                Dat kan een tas zijn, een wandkleed, een babydekentje of een
+                heel ander product dat past bij jouw verhaal. Soms ontstaat het
+                idee vooraf, soms juist pas wanneer we samen in de kleding
+                duiken en herinneringen ophalen.
               </p>
               <p>
                 Alles wat van stof gemaakt kan worden, valt te bespreken. Soms
@@ -141,14 +177,14 @@ export default function ProductenPage() {
                 Vraag de mogelijkheden aan
               </Link>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* ZORG & GARANTIE — promises that matter to grieving customers */}
+      {/* ZORG & GARANTIE */}
       <section className="bg-[var(--color-sage-50)] py-24 md:py-28">
         <div className="container-prose">
-          <div className="max-w-2xl mb-12">
+          <Reveal className="max-w-2xl mb-12">
             <p className="eyebrow mb-4">Zorg & garantie</p>
             <h2 className="display text-3xl md:text-5xl leading-[1.05]">
               Vier beloftes die ik{" "}
@@ -156,17 +192,17 @@ export default function ProductenPage() {
                 altijd nakom.
               </em>
             </h2>
-          </div>
+          </Reveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               {
-                title: "Verzekerd verzonden",
-                body: "Kleding die je opstuurt is onvervangbaar. Ik regel verzekerd transport — bij verlies of schade compenseer ik tot de werkelijke (emotionele) waarde voor zover dat überhaupt mogelijk is.",
+                title: "Zorgvuldige behandeling",
+                body: "De kleding die je aan mij toevertrouwt behandel ik met respect en aandacht. Tijdens het hele proces werk ik zorgvuldig met de stoffen, details en herinneringen die eraan verbonden zijn.",
               },
               {
                 title: "Restanten in jouw hand",
-                body: "Wat ik niet verwerk krijg je terug — in een doos, netjes gevouwen. Wil je dat ik restanten bewaar voor eventueel later werk? Ook prima. Jij beslist.",
+                body: "Alle stof die ik niet verwerk krijg je terug. Netjes verzameld in een tas, zodat je deze kunt bewaren voor later. Misschien wil je er ooit nog iets van laten maken, misschien bewaar je het gewoon als herinnering. De keuze is aan jou.",
               },
               {
                 title: "Levenslange reparatie",
@@ -174,11 +210,13 @@ export default function ProductenPage() {
               },
               {
                 title: "Verzorgingsgids",
-                body: "Bij elk stuk een handgeschreven kaart met wasvoorschriften en bewaartips, zodat het blijft wat het bedoeld is om te zijn — iets dat met je meegaat door de jaren.",
+                body: "Bij elk stuk ontvang je een kaart met wasvoorschriften en bewaartips, zodat jouw herinneringsproduct mooi blijft en jarenlang mee kan gaan.",
               },
-            ].map((p) => (
-              <article
+            ].map((p, i) => (
+              <Reveal
                 key={p.title}
+                as="article"
+                delay={i * 80}
                 className="rounded-[var(--radius-lg)] bg-[var(--color-cream-50)] border border-[var(--color-taupe-100)] p-6"
               >
                 <div className="w-9 h-9 rounded-full bg-[var(--color-sage-100)] flex items-center justify-center mb-4">
@@ -188,7 +226,7 @@ export default function ProductenPage() {
                 </div>
                 <h3 className="display text-xl mb-2">{p.title}</h3>
                 <p className="text-[14px] leading-relaxed">{p.body}</p>
-              </article>
+              </Reveal>
             ))}
           </div>
         </div>

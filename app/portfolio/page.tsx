@@ -1,10 +1,12 @@
 import Link from "next/link";
 import ImageCard from "@/components/ImageCard";
 import Ornament from "@/components/Ornament";
+import Reveal from "@/components/Reveal";
 
 export const metadata = {
-  title: "Portfolio — Atelier Kim Jansen",
-  description: "Eerder gemaakte stukken, met de verhalen erbij. Met toestemming gedeeld.",
+  title: "Inspiratie — Atelier Kim Jansen",
+  description:
+    "Eerder gemaakte stukken met de verhalen erbij. Een collega's kinderkleertjes-tas, een tas voor Christina, herinneringen aan oma, en mijn eerste patchworkdeken.",
 };
 
 type Piece = {
@@ -12,125 +14,79 @@ type Piece = {
   type: string;
   tone: "rose" | "sage" | "taupe" | "cream";
   pattern: "botanical" | "weave" | "stitch" | "flower";
-  story: string;
-  aspect: "portrait" | "square" | "wide";
-  feature?: boolean;
+  paragraphs: string[];
 };
 
 const pieces: Piece[] = [
   {
-    title: "Voor Erika",
-    type: "Spijkerjasje · overhemden vader",
+    title: "Een tas vol kinderherinneringen",
+    type: "Tas · kinderkleertjes",
     tone: "rose",
     pattern: "botanical",
-    aspect: "portrait",
-    story: "Erika's vader had een kast vol blauwe overhemden. We gebruikten er vijf — geborduurd met wilde bloemen, omdat hij elke ochtend in zijn tuin begon.",
-    feature: true,
+    paragraphs: [
+      "Een collega vroeg mij of ik van haar eigen kinderkleertjes een tas wilde maken. De kledingstukken waren te bijzonder om weg te doen, maar er was niet genoeg stof beschikbaar om daar een complete tas van te maken.",
+      "Samen gingen we op zoek naar een oplossing. We kozen ervoor om de dierbare stoffen te combineren met een zachte ribstof, waardoor de kinderkleertjes alle aandacht kregen die ze verdienen.",
+      "De verschillende applicaties, borduursels en stofjes vertellen ieder hun eigen verhaal. Stukjes uit haar kindertijd, verwerkt in een tas die niet in een kast verdwijnt, maar juist gebruikt kan worden in het dagelijks leven.",
+      "Zo kregen herinneringen die jarenlang waren bewaard een nieuwe plek en een nieuw doel.",
+    ],
   },
   {
-    title: "Melissa's deken",
-    type: "Patchwork · winterjas moeder",
-    tone: "sage",
-    pattern: "weave",
-    aspect: "wide",
-    story: "Van moeders winterjas, twee blouses en een zomerrok maakte ik een deken van 180×120. Voor op de bank waar ze samen altijd zaten.",
-  },
-  {
-    title: "Voor mijn nichtje",
-    type: "Babydekentje · trouwjurk oma",
+    title: "Een tas die gebruikt mag worden",
+    type: "Tas · babykleertjes · cadeau",
     tone: "cream",
     pattern: "flower",
-    aspect: "square",
-    story: "De trouwjurk van oma, omgevormd tot een dekentje voor een achterkleinkind dat ze nooit heeft gekend. De kant van de jurk werd de rand.",
+    paragraphs: [
+      "Voor Christina maakte ik een tas van dierbare babykleertjes. De verschillende stofjes en details vormen samen een uniek ontwerp dat helemaal bij haar past.",
+      "Bij het ontwerpen heb ik rekening gehouden met de kleuren waar zij van houdt, zodat het niet alleen een tas vol herinneringen werd, maar ook een tas die ze graag zou gebruiken. Aan de binnenkant maakte ik verschillende vakjes, zodat de tas niet alleen mooi is, maar ook praktisch in het dagelijks gebruik.",
+      "Ik gaf de tas cadeau voor haar verjaardag. Inmiddels wordt hij veel gebruikt, en dat vind ik misschien wel het mooiste compliment dat een handgemaakt product kan krijgen.",
+    ],
   },
   {
-    title: "Linde's kussen",
-    type: "Lievelingsblouse",
+    title: "Herinneringen aan mijn oma",
+    type: "Tas + kussen · december 2025",
     tone: "taupe",
     pattern: "stitch",
-    aspect: "square",
-    story: "Eén blouse. De knopen zaten er nog op. Het kussen ligt nu op haar bureau — ze legt haar hand erop als ze schrijft.",
+    paragraphs: [
+      "In december 2025 overleed mijn oma. Ik ben enorm dankbaar dat ik kleding van haar heb gekregen. Ik wist al dat ik daar graag iets van wilde maken en daarom betekent het veel voor mij dat ik die kleding heb mogen ontvangen.",
+      "Als eerste maakte ik een tas. Die gebruik ik nog steeds bijna iedere dag. Het voelt fijn om iets van mijn oma bij me te hebben. Een stukje van haar te zien wanneer ik naar de tas kijk. Daarnaast krijg ik er veel complimenten over, wat het extra bijzonder maakt.",
+      "Daarna maakte ik een kussen. Dat gaf weer een heel andere beleving. Ik kan mijn hoofd erop leggen, het vasthouden of ermee op de bank zitten. De herinnering is hetzelfde, maar de ervaring is heel anders.",
+      "Wat dit project voor mij extra bijzonder maakte, was het maakproces zelf. Mijn hele atelier rook naar de kleding van mijn oma. Terwijl ik met de stoffen bezig was, dacht ik aan wie ze was en aan de herinneringen die we samen hebben gemaakt. Met haar in gedachten maakte ik producten die niet alleen mooi zijn, maar ook een blijvende herinnering vormen.",
+      "Dit project liet mij zien hoe waardevol het is om herinneringen niet alleen te bewaren, maar ze ook een plek te geven in het dagelijks leven.",
+    ],
   },
   {
-    title: "Voor Karin",
-    type: "Sjaal · zijden blouse",
-    tone: "rose",
-    pattern: "flower",
-    aspect: "portrait",
-    story: "Een lichte sjaal van twee zijden blouses, met een handgenaaide rand. Karin draagt hem op het werk — &lsquo;zo heb ik haar bij me op moeilijke dagen.&rsquo;",
-  },
-  {
-    title: "Bomber voor Joost",
-    type: "Leren jas vader",
-    tone: "taupe",
-    pattern: "weave",
-    aspect: "wide",
-    story: "De oude leren jas van Joost's vader was te versleten om te dragen. We maakten er een bomber van, met voering uit een oude zakdoek.",
-  },
-  {
-    title: "Wandkleed Hannah",
-    type: "Patchwork · zes kledingstukken",
+    title: "Mijn eerste patchworkdeken",
+    type: "Deken · eigen kleding · oefenproject",
     tone: "sage",
-    pattern: "botanical",
-    aspect: "portrait",
-    story: "Boven het bed van Hannah's vader hangt nu wat hij droeg — een rustig wandkleed van zes kledingstukken. Geen woorden, alleen stof.",
-  },
-  {
-    title: "Tas voor Sanne",
-    type: "Maatwerk · kostuum opa",
-    tone: "cream",
-    pattern: "stitch",
-    aspect: "square",
-    story: "Het tweed kostuum van Sanne's opa werd een schoudertas, met voering uit zijn zakdoek. Ze neemt hem mee als ze naar zijn graf gaat.",
+    pattern: "weave",
+    paragraphs: [
+      "Toen ik wist dat ik herinneringsproducten wilde gaan maken, wilde ik natuurlijk ook zelf ervaren hoe het is om van verschillende kledingstukken iets nieuws te creëren.",
+      "Het idee van patchwork sprak me al langer aan. Eerder maakte ik al een bevrijdingsrok, waarbij verschillende stoffen samen een nieuw verhaal vormen. Met datzelfde gevoel begon ik aan deze deken.",
+      "Voor deze deken gebruikte ik kleding die ik zelf niet meer droeg. Verschillende stoffen, kleuren en herinneringen kwamen samen in één nieuw product. Niet om iets ouds te vervangen, maar om er iets nieuws van te maken.",
+      "Het resultaat is een deken waar ik graag onder lig op de bank, maar die ook prachtig staat als sprei. Voor mij was dit project niet alleen een oefening in techniek, maar ook een bevestiging van hoe bijzonder het is om bestaande stoffen een tweede leven te geven.",
+    ],
   },
 ];
 
 export default function PortfolioPage() {
-  const featured = pieces.find((p) => p.feature)!;
-  const rest = pieces.filter((p) => !p.feature);
-
   return (
     <>
       {/* HERO */}
       <section className="bg-[var(--color-cream-50)] pt-20 md:pt-28 pb-12">
         <div className="container-prose">
-          <p className="eyebrow mb-6">Portfolio</p>
+          <p className="eyebrow mb-6">Inspiratie</p>
           <h1 className="display text-4xl md:text-6xl leading-[1.04] max-w-4xl">
-            Eerder gemaakt, met de{" "}
+            Vier projecten, met{" "}
             <em className="font-[family-name:var(--font-cormorant)] italic text-[var(--color-rose-300)] font-light">
-              verhalen erbij.
+              hun verhalen erbij.
             </em>
           </h1>
           <p className="mt-8 max-w-2xl text-[1.05rem] leading-[1.85]">
-            Met toestemming van de eigenaren. Sommige namen zijn aangepast,
-            sommige verhalen ingekort. Wat overblijft is hoe deze stukken in
-            de wereld kwamen — en bij wie ze nu zijn.
+            Een tas van kinderkleertjes, een tas die elke dag gebruikt mag
+            worden, herinneringen aan mijn oma, en mijn eerste patchworkdeken
+            van eigen kleding. Kleine en grote projecten — wat ze delen is
+            wat ze zijn geworden.
           </p>
-        </div>
-      </section>
-
-      {/* FEATURED */}
-      <section className="bg-[var(--color-cream-50)] pb-20 md:pb-24">
-        <div className="container-prose grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-16 items-center">
-          <ImageCard
-            tone={featured.tone}
-            pattern={featured.pattern}
-            aspect="wide"
-            caption={featured.title}
-          />
-          <div>
-            <p className="eyebrow mb-3">{featured.type}</p>
-            <h2 className="display text-3xl md:text-5xl leading-[1.05] mb-5">
-              {featured.title}
-            </h2>
-            <p className="leading-[1.85] text-[1.05rem]">{featured.story}</p>
-            <div className="mt-6 flex items-center gap-3">
-              <Ornament variant="stem" className="w-16 h-5" />
-              <span className="font-[family-name:var(--font-caveat)] text-xl text-[var(--color-rose-300)]">
-                — Erika
-              </span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -138,28 +94,44 @@ export default function PortfolioPage() {
         <div className="divider-stitched" />
       </div>
 
-      {/* GRID */}
-      <section className="bg-[var(--color-cream-50)] pt-16 md:pt-20 pb-24">
-        <div className="container-prose">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14">
-            {rest.map((p, i) => (
-              <article key={p.title} className={i % 3 === 1 ? "lg:mt-12" : ""}>
-                <ImageCard tone={p.tone} pattern={p.pattern} aspect={p.aspect} />
-                <div className="mt-5">
-                  <p className="eyebrow mb-2">{p.type}</p>
-                  <h3 className="display text-2xl mb-3">{p.title}</h3>
-                  <p className="text-[14.5px] leading-relaxed italic text-[var(--color-ink-mute)]">
-                    {p.story}
-                  </p>
+      {/* PROJECT BLOCKS */}
+      <section className="bg-[var(--color-cream-50)] pt-16 md:pt-24 pb-12">
+        <div className="container-prose space-y-24 md:space-y-32">
+          {pieces.map((p, i) => (
+            <Reveal
+              key={p.title}
+              as="article"
+              className={`grid md:grid-cols-2 gap-10 md:gap-16 items-start ${
+                i % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""
+              }`}
+            >
+              <div className={i % 2 === 1 ? "md:sticky md:top-28" : "md:sticky md:top-28"}>
+                <ImageCard tone={p.tone} pattern={p.pattern} aspect="portrait" />
+              </div>
+              <div>
+                <p className="eyebrow mb-3">{p.type}</p>
+                <h2 className="display text-3xl md:text-4xl leading-[1.05] mb-6">
+                  {p.title}
+                </h2>
+                <div className="space-y-5 leading-[1.85] text-[1rem]">
+                  {p.paragraphs.map((par, idx) => (
+                    <p key={idx}>{par}</p>
+                  ))}
                 </div>
-              </article>
-            ))}
-          </div>
+                <div className="mt-8 flex items-center gap-4">
+                  <Ornament variant="stem" className="w-16 h-5" />
+                  <span className="font-[family-name:var(--font-caveat)] text-xl text-[var(--color-rose-300)]">
+                    — Kim
+                  </span>
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
       {/* SOCIAL TEASER */}
-      <section className="bg-[var(--color-linen)] py-20 md:py-28">
+      <section className="bg-[var(--color-linen)] py-20 md:py-28 mt-16">
         <div className="container-prose grid md:grid-cols-[1.2fr_1fr] gap-12 items-center">
           <div>
             <p className="eyebrow mb-4">Meer zien?</p>
@@ -197,6 +169,21 @@ export default function PortfolioPage() {
             <ImageCard tone="rose" pattern="flower" aspect="square" />
             <ImageCard tone="sage" pattern="botanical" aspect="square" className="mt-6" />
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-[var(--color-rose-50)] py-24 md:py-28">
+        <div className="container-prose text-center">
+          <h2 className="display text-3xl md:text-5xl max-w-3xl mx-auto leading-[1.05]">
+            Heb je zelf een verhaal{" "}
+            <em className="font-[family-name:var(--font-cormorant)] italic text-[var(--color-rose-300)] font-light">
+              dat je graag wil bewaren?
+            </em>
+          </h2>
+          <Link href="/contact" className="btn btn-primary mt-10 text-base px-8 py-4">
+            Vraag de mogelijkheden aan
+          </Link>
         </div>
       </section>
     </>

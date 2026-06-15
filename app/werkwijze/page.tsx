@@ -118,17 +118,16 @@ export default function WerkwijzePage() {
               je niet zien wat ik aan het maken ben. Dat vraagt iets.
             </p>
             <p>
-              Maar in de jaren dat ik dit doe, heb ik gemerkt: zodra ik een
-              schets laat zien, gaat het mis. Niet omdat de schets niet
-              klopte, maar omdat een ontwerp vooraf de eindigheid vasthoudt.
-              Het haalt het ademen weg. Het maakt van een herinnering een
-              product.
+              Uit ervaring weet ik: zodra ik een schets laat zien, gaat het
+              mis. Niet omdat de schets niet klopte, maar omdat een ontwerp
+              vooraf de eindigheid vasthoudt. Het haalt het ademen weg. Het
+              maakt van een herinnering een product.
             </p>
             <p>
-              In het gesprek vertel je me wat ik moet weten. Welke kleur ze
-              droeg op haar bruiloft. Het overhemd waarin hij in zijn tuin
-              zat. De broek die je liever niet ziet. Dat zit allemaal in mijn
-              hoofd als ik werk. Niet als een opdracht — als een richting.
+              In het gesprek vertel je me wat ik moet weten. Wat ik mooi mag
+              vinden, en wat je liever niet ziet. Welke details belangrijk
+              zijn om terug te laten komen. Dat zit allemaal in mijn hoofd als
+              ik werk. Niet als een opdracht — als een richting.
             </p>
             <p className="font-[family-name:var(--font-cormorant)] italic text-xl text-[var(--color-rose-100)]">
               &ldquo;Je krijgt geen verrassing — je krijgt wat ik van het
@@ -152,27 +151,27 @@ export default function WerkwijzePage() {
             {[
               {
                 q: "Wat als ik toch graag iets vooraf wil zien?",
-                a: "Dat snap ik. We kunnen samen voorbeelden bekijken van eerder werk, om een gevoel te krijgen van mijn stijl. Maar voor het specifieke stuk dat ik voor jou maak — daarvan zie je het eindresultaat als eerste.",
+                a: "Vooraf bespreken we samen jouw wensen. Wat vind je mooi? Welke details zijn belangrijk om terug te laten komen? En zijn er dingen die je liever niet verwerkt ziet? Dat neem ik allemaal mee in het ontwerp. Tijdens het maakproces laat ik geen tussenresultaten zien. Zo blijft er ruimte voor creativiteit en kan het ontwerp op een natuurlijke manier ontstaan.",
               },
               {
-                q: "Kun je werken met heel beperkte kleding?",
-                a: "Ja. Ik heb stukken gemaakt van één overhemd. Of van een paar T-shirts. Soms maakt minder het juist mooier — er is dan ruimte voor andere stof eromheen.",
+                q: "Wat kan er verwerkt worden in een herinneringsproduct?",
+                a: "Meer dan je misschien denkt. Natuurlijk kan ik kleding verwerken, maar ook andere stoffen met een bijzondere betekenis. Denk bijvoorbeeld aan een sjaal, stropdas, zakdoek, schort, tafelkleed, beddengoed of trouwkleding. Twijfel je of iets geschikt is? Vraag het gerust. Samen kijken we naar de mogelijkheden. En wat ik uiteindelijk niet gebruik, krijg je altijd weer mee naar huis.",
+              },
+              {
+                q: "Kan er ook iets gemaakt worden van een beperkte hoeveelheid kleding?",
+                a: "Ja, vaak is er meer mogelijk dan je denkt. Heb je weinig kleding beschikbaar? Dan kunnen we samen kijken naar een andere stof die mooi aansluit bij de originele kleding, waarbij de stoffen van jouw dierbare centraal blijven staan. Voor een deken zijn meestal 20 tot 30 kledingstukken nodig, voor een kussen ongeveer 10, en voor een tas tussen de 10 en 20.",
               },
               {
                 q: "Wat als ik het niet mooi vind?",
                 a: "Dat is zeldzaam — bijna iedereen heeft een reactie die voorbij 'mooi' gaat. Maar als het echt niet werkt voor jou, praten we erover. Sommige dingen kunnen we aanpassen.",
               },
               {
-                q: "Hoe zit het met aanbetaling en eigendom?",
-                a: "Bij opdracht betaal je 30% aanbetaling. De rest bij oplevering. De originele kleding die je opstuurt blijft van jou — alleen wat ik erin verwerk, wordt onderdeel van het nieuwe stuk.",
-              },
-              {
                 q: "Werk je ook voor mensen die nog leven?",
-                a: "Zeker. Een jasje van je eigen vroegere kleding, een deken voor een nieuwgeboren kleinkind, een sjaal als afscheidscadeau bij pensioen — al die verhalen zijn welkom.",
+                a: "Zeker. Een jasje van je eigen vroegere kleding, een deken voor een nieuwgeboren kleinkind, of een product van de kinderkleertjes die je hebt bewaard — al die verhalen zijn welkom. Afscheid is niet alleen bij overlijden, maar ook bij leeftijden die niet meer terugkomen.",
               },
               {
                 q: "Hoe ver in Nederland kom je voor een gesprek?",
-                a: "Voor het kennismakingsgesprek kom ik in heel Nederland langs. Reistijd vanaf een uur bereken ik tegen onkostenvergoeding. Online werkt ook vaak prima.",
+                a: "Vanuit Twente kom ik in heel Nederland langs voor het kennismakingsgesprek. Reistijd vanaf een uur bereken ik tegen onkostenvergoeding. Online werkt ook vaak prima.",
               },
             ].map((f) => (
               <div key={f.q}>

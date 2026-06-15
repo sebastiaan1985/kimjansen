@@ -3,7 +3,6 @@ import Ornament from "@/components/Ornament";
 import ImageCard from "@/components/ImageCard";
 import HeroVideo from "@/components/HeroVideo";
 import Reveal from "@/components/Reveal";
-import ReviewCard from "@/components/ReviewCard";
 
 export default function HomePage() {
   return (
@@ -56,10 +55,10 @@ export default function HomePage() {
               houden.
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-[var(--color-ink-soft)] drop-shadow-[0_1px_0_rgba(246,241,232,0.7)]">
-              Van de kleding van iemand die je dierbaar was, maak ik iets dat
-              je tegen je aan kunt drukken. Een jasje, een deken, een kussen,
-              een sjaal — gedragen door wie er niet meer is, gedragen door
-              jou.
+              Van kleding met een verhaal maak ik iets dat je tegen je aan
+              kunt drukken. Een jasje, een deken, een kussen, een tas —
+              gedragen door wie er niet meer is, of door wie er ooit nog was.
+              Gedragen door jou.
             </p>
             <div className="mt-10 flex flex-wrap gap-4 items-center">
               <Link href="/contact" className="btn btn-primary">
@@ -84,19 +83,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* GENTLE ENTRY — "Net iemand verloren?" */}
+      {/* GENTLE ENTRY — afscheid in alle vormen */}
       <section className="bg-[var(--color-cream-50)] pt-20 md:pt-28 pb-4 md:pb-8">
         <div className="container-prose">
           <Reveal className="max-w-3xl mx-auto text-center">
             <p className="eyebrow mb-5">Voordat je verder leest</p>
             <p className="display text-2xl md:text-[1.95rem] leading-[1.35] text-[var(--color-ink)] font-light">
-              Ben je hier omdat je iemand verloren bent —{" "}
+              Afscheid is niet alleen bij overlijden,{" "}
               <em className="font-[family-name:var(--font-cormorant)] italic text-[var(--color-rose-300)]">
-                kortgeleden of lang geleden?
+                maar ook bij leeftijden die niet meer terugkomen.
               </em>{" "}
-              Lees rustig. Er is geen "juiste" tijd. Sommige mensen komen na
-              twee weken, anderen na tien jaar. Je hoeft niet te weten wat je
-              wilt om een gesprek aan te vragen.
+              Of je iemand verloren bent, of de kinderkleertjes die je
+              jarenlang hebt bewaard nu een plek wilt geven — lees rustig. Er
+              is geen "juiste" tijd. Je hoeft niet te weten wat je wilt om
+              een gesprek aan te vragen.
             </p>
           </Reveal>
         </div>
@@ -155,10 +155,10 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Jasjes", desc: "Spijker, leer of katoen. Geborduurd, met paisley of bloemen — uniek voor jou.", tone: "rose" as const, pattern: "botanical" as const },
-              { title: "Dekens", desc: "Een herinneringsdeken van stoffen die hem of haar droegen. Om over je heen te trekken.", tone: "sage" as const, pattern: "weave" as const },
-              { title: "Kussens", desc: "Klein, dichtbij. Een kussen om aan vast te houden, op de bank of in bed.", tone: "taupe" as const, pattern: "stitch" as const },
-              { title: "Sjaals", desc: "Iets om om je heen te slaan, mee te nemen, dichtbij te dragen.", tone: "cream" as const, pattern: "flower" as const },
+              { title: "Jasjes", desc: "Spijker of katoen, voorzien van patchwork van bijzondere kleding. Een draagbare herinnering.", tone: "rose" as const, pattern: "botanical" as const },
+              { title: "Dekens", desc: "Een warm patchwork van overhemden, blouses en T-shirts. Om je heen, of een plek in huis.", tone: "sage" as const, pattern: "weave" as const },
+              { title: "Kussens", desc: "Klein, dichtbij. Om aan vast te houden, op de bank, of mee te slapen.", tone: "taupe" as const, pattern: "stitch" as const },
+              { title: "Tassen", desc: "Een patchwork-tas die je elke dag mee kunt nemen. Met praktische vakken aan de binnenkant.", tone: "cream" as const, pattern: "flower" as const },
             ].map((p, i) => (
               <Reveal key={p.title} as="article" delay={i * 80} className="group">
                 <ImageCard tone={p.tone} pattern={p.pattern} aspect="portrait" />
@@ -285,85 +285,71 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* REVIEWS / VERHALEN */}
+      {/* RECENTE PROJECTEN */}
       <section className="bg-[var(--color-cream-50)] py-24 md:py-32">
         <div className="container-prose">
           <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 max-w-5xl">
             <div>
-              <p className="eyebrow mb-4">Verhalen</p>
+              <p className="eyebrow mb-4">Inspiratie</p>
               <h2 className="display text-3xl md:text-5xl max-w-2xl leading-[1.05]">
-                Wat mensen{" "}
+                Recent gemaakt, met{" "}
                 <em className="font-[family-name:var(--font-cormorant)] italic text-[var(--color-rose-300)] font-light">
-                  achteraf zeggen.
+                  hun verhalen erbij.
                 </em>
               </h2>
             </div>
             <p className="max-w-sm text-[var(--color-ink-soft)]">
-              Met toestemming gedeeld. Sommige namen zijn aangepast om privacy
-              te respecteren.
+              Kleine en grote projecten — uit eigen kast en uit gesprekken met
+              anderen. Geen klantenreviews; echte stukken.
             </p>
           </Reveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {[
               {
-                quote: "Kim heeft van het overhemd van mijn vader een jasje gemaakt dat ik nu draag op zijn verjaardag. Het is geen herinnering meer in een doos — het is iets dat met me meegaat.",
-                name: "Erika",
-                context: "Voor haar vader · Spijkerjasje",
+                eyebrow: "Tas · kinderkleertjes",
+                title: "Een tas vol kinderherinneringen",
+                excerpt: "Voor een collega — kinderkleertjes gecombineerd met zachte ribstof tot een tas die elke dag wordt gebruikt.",
                 tone: "rose" as const,
+                pattern: "botanical" as const,
               },
               {
-                quote: "Ik wist niet zeker wat ik wilde. Kim heeft anderhalf uur naar me geluisterd. Wat er uiteindelijk kwam — een deken van moeders blouses — was precies wat ik niet kon benoemen.",
-                name: "Melissa",
-                context: "Voor haar moeder · Patchworkdeken",
-                tone: "sage" as const,
-              },
-              {
-                quote: "Voor mijn schoonmoeder gemaakt na het verlies van mijn schoonvader. De eerste keer dat ze het kussen vasthield, huilde ze. Niet van verdriet, zei ze. Van herkennen.",
-                name: "Joost",
-                context: "Cadeau voor schoonmoeder · Kussen",
+                eyebrow: "Tas · babykleertjes",
+                title: "Een tas die gebruikt mag worden",
+                excerpt: "Voor Christina: dierbare babykleertjes verwerkt tot een patchwork-tas met praktische binnenvakken. Cadeau voor haar verjaardag.",
                 tone: "cream" as const,
+                pattern: "flower" as const,
               },
               {
-                quote: "Acht jaar na het overlijden van mijn man wist ik eindelijk wat ik wilde. Kim oordeelde niet over het wachten. Ze maakte er iets van dat hem helemaal was — én iets nieuws.",
-                name: "Hannah",
-                context: "Voor haar man · Sjaal",
-                tone: "rose" as const,
+                eyebrow: "Tas + kussen",
+                title: "Herinneringen aan mijn oma",
+                excerpt: "December 2025: van oma's kleding maakte ik eerst een tas, daarna een kussen. Het atelier rook nog wekenlang naar haar.",
+                tone: "taupe" as const,
+                pattern: "stitch" as const,
               },
               {
-                quote: "Mijn opa's tweed-kostuum lag al jaren in een kast. Een tas waar ik elke dag mee loop. Een stukje van hem dat met me mee de wereld in gaat.",
-                name: "Sanne",
-                context: "Voor haar opa · Schoudertas",
+                eyebrow: "Deken · eigen kleding",
+                title: "Mijn eerste patchworkdeken",
+                excerpt: "Van kleding die ik zelf niet meer droeg. Op de bank een deken; over de bank een sprei. Een tweede leven voor bestaande stof.",
                 tone: "sage" as const,
+                pattern: "weave" as const,
               },
-              {
-                quote: "Wij verwijzen rouwende familieleden naar Kim. Wat zij maakt verlengt onze nazorg — vakwerk gecombineerd met enorme persoonlijke aandacht.",
-                name: "Uitvaartonderneming De Linde",
-                context: "Partner sinds 2024",
-                tone: "cream" as const,
-              },
-            ].map((r, i) => (
-              <Reveal key={r.name + i} delay={(i % 3) * 100}>
-                <ReviewCard {...r} />
+            ].map((p, i) => (
+              <Reveal key={p.title} as="article" delay={i * 80} className="group">
+                <ImageCard tone={p.tone} pattern={p.pattern} aspect="portrait" />
+                <p className="eyebrow mt-5 mb-2">{p.eyebrow}</p>
+                <h3 className="display text-xl mb-3 leading-[1.2]">{p.title}</h3>
+                <p className="text-sm leading-relaxed text-[var(--color-ink-soft)]">
+                  {p.excerpt}
+                </p>
               </Reveal>
             ))}
           </div>
 
-          <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-[var(--color-ink-mute)]">
-            <div className="flex items-center gap-2">
-              <span className="display text-2xl text-[var(--color-ink)]">120+</span>
-              <span>persoonlijke stukken gemaakt</span>
-            </div>
-            <span className="hidden sm:block w-px h-5 bg-[var(--color-taupe-200)]" />
-            <div className="flex items-center gap-2">
-              <span className="display text-2xl text-[var(--color-ink)]">98%</span>
-              <span>verwijst Kim aan door</span>
-            </div>
-            <span className="hidden sm:block w-px h-5 bg-[var(--color-taupe-200)]" />
-            <div className="flex items-center gap-2">
-              <span className="display text-2xl text-[var(--color-ink)]">8+</span>
-              <span>jaar atelier-ervaring</span>
-            </div>
+          <div className="mt-14 text-center">
+            <Link href="/portfolio" className="btn btn-secondary">
+              Lees alle inspiratieverhalen
+            </Link>
           </div>
         </div>
       </section>
