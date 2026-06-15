@@ -93,8 +93,8 @@ export default function ContactPage() {
               </button>
               <p className="mt-4 text-xs text-[var(--color-ink-mute)]">
                 Liever bellen of appen? Geen probleem — gebruik{" "}
-                <a href="tel:+31610137351" className="link-underline">
-                  06 — 1013 7351
+                <a href="tel:+31625145304" className="link-underline">
+                  06 — 2514 5304
                 </a>{" "}
                 of de WhatsApp-knop hiernaast.
               </p>
@@ -115,8 +115,8 @@ export default function ContactPage() {
                 </li>
                 <li>
                   <span className="block eyebrow mb-1">Telefoon</span>
-                  <a className="link-underline" href="tel:+31610137351">
-                    06 — 1013 7351
+                  <a className="link-underline" href="tel:+31625145304">
+                    06 — 2514 5304
                   </a>
                   <span className="block text-xs text-[var(--color-ink-mute)] mt-1">
                     Ma–vr, 09–17u. Op andere momenten gerust een berichtje.

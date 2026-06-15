@@ -41,13 +41,13 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="tel:+31610137351" className="link-underline">
-                06 — 1013 7351
+              <a href="tel:+31625145304" className="link-underline">
+                06 — 2514 5304
               </a>
             </li>
             <li>
               <a
-                href="https://wa.me/31610137351?text=Hoi%20Kim%2C%20ik%20heb%20een%20vraag"
+                href="https://wa.me/31625145304?text=Hoi%20Kim%2C%20ik%20heb%20een%20vraag"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="link-underline"
@@ -91,7 +91,7 @@ export default function Footer() {
                 Algemene voorwaarden
               </Link>
             </li>
-            <li>KvK & BTW — wordt nog toegevoegd</li>
+            <li>KvK 42062034 · BTW NL005467109B21</li>
           </ul>
         </div>
       </div>

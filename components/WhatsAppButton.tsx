@@ -5,7 +5,7 @@ type Props = {
   message?: string;
 };
 
-const WHATSAPP_NUMBER = "31610137351";
+const WHATSAPP_NUMBER = "31625145304";
 const DEFAULT_MESSAGE =
   "Hoi Kim, ik kwam je website tegen en heb een vraag over een herinneringsproduct.";
 
