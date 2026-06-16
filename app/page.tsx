@@ -161,7 +161,7 @@ export default function HomePage() {
               { title: "Tassen", desc: "Een patchwork-tas die je elke dag mee kunt nemen. Met praktische vakken aan de binnenkant.", tone: "cream" as const, pattern: "flower" as const, src: "/images/tas-collega.jpg" },
             ].map((p, i) => (
               <Reveal key={p.title} as="article" delay={i * 80} className="group">
-                <ImageCard tone={p.tone} pattern={p.pattern} aspect="portrait" src={p.src} alt={`Herinnerings${p.title.toLowerCase()} van Atelier Kim Jansen`} />
+                <ImageCard tone={p.tone} pattern={p.pattern} aspect="portrait" src={p.src} alt={`Herinnerings${p.title.toLowerCase()} van Atelier Kim Jansen`} blend={p.title === "Jasjes"} />
                 <h3 className="display text-2xl mt-5 mb-2">{p.title}</h3>
                 <p className="text-sm leading-relaxed">{p.desc}</p>
               </Reveal>

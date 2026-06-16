@@ -107,7 +107,7 @@ export default function ProductenPage() {
               }`}
             >
               <div>
-                <ImageCard tone={p.tone} pattern={p.pattern} aspect="wide" src={p.src} alt={p.title} />
+                <ImageCard tone={p.tone} pattern={p.pattern} aspect="wide" src={p.src} alt={p.title} blend={p.title === "Herinneringsjasjes"} />
               </div>
               <div>
                 <p className="eyebrow mb-3">{p.sub}</p>

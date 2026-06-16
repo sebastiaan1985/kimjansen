@@ -8,6 +8,7 @@ type Props = {
   src?: string;
   alt?: string;
   objectPosition?: string;
+  blend?: boolean;
 };
 
 const toneMap = {
@@ -123,8 +124,38 @@ export default function ImageCard({
   src,
   alt,
   objectPosition = "center",
+  blend = false,
 }: Props) {
   const t = toneMap[tone];
+
+  // "blend" = studio shots on a white background; multiply melts the white
+  // into the page's cream so the product appears to float on the page.
+  if (src && blend) {
+    return (
+      <figure className={`group relative ${className}`}>
+        <div className={`relative ${aspectMap[aspect]}`}>
+          <img
+            src={src}
+            alt={alt ?? caption ?? "Atelier Kim Jansen"}
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-[1.03]"
+            style={{ objectPosition }}
+          />
+        </div>
+        {caption && (
+          <figcaption className="mt-3 text-sm font-medium tracking-wide text-[var(--color-ink-soft)]">
+            {caption}
+          </figcaption>
+        )}
+        {story && (
+          <p className="mt-3 text-sm italic text-[var(--color-ink-mute)] leading-relaxed">
+            {story}
+          </p>
+        )}
+      </figure>
+    );
+  }
+
   return (
     <figure className={`group relative ${className}`}>
       <div
