@@ -5,6 +5,9 @@ type Props = {
   aspect?: "portrait" | "square" | "wide";
   pattern?: "botanical" | "stitch" | "weave" | "flower";
   className?: string;
+  src?: string;
+  alt?: string;
+  objectPosition?: string;
 };
 
 const toneMap = {
@@ -117,6 +120,9 @@ export default function ImageCard({
   aspect = "portrait",
   pattern = "botanical",
   className = "",
+  src,
+  alt,
+  objectPosition = "center",
 }: Props) {
   const t = toneMap[tone];
   return (
@@ -125,7 +131,17 @@ export default function ImageCard({
         className={`relative ${aspectMap[aspect]} overflow-hidden rounded-[var(--radius-lg)] shadow-[var(--shadow-soft)]`}
         style={{ background: t.bg }}
       >
-        <Pattern kind={pattern} color={t.accent} />
+        {src ? (
+          <img
+            src={src}
+            alt={alt ?? caption ?? "Atelier Kim Jansen"}
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            style={{ objectPosition }}
+          />
+        ) : (
+          <Pattern kind={pattern} color={t.accent} />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
         {caption && (
           <figcaption className="absolute bottom-4 left-4 right-4 text-[var(--color-cream-50)] text-sm font-medium tracking-wide drop-shadow">

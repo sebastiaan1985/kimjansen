@@ -15,6 +15,7 @@ const products = [
     sub: "Spijker · katoen",
     tone: "rose" as const,
     pattern: "botanical" as const,
+    src: "/images/jasje.jpg",
     body: "Een jasje dat een verhaal met zich meedraagt. Een spijkerjasje, blazer of ander katoenen jasje wordt voorzien van zorgvuldig gekozen stukken kleding die een bijzondere betekenis hebben. Door middel van patchwork verwerk ik de stoffen tot een uniek ontwerp dat past bij de persoon die het gaat dragen. Zo ontstaat een draagbare herinnering waarin stoffen, kleuren en details samenkomen.",
     details: [
       "Maatwerk in jouw maat",
@@ -27,6 +28,7 @@ const products = [
     sub: "Warm · persoonlijk · samen",
     tone: "sage" as const,
     pattern: "weave" as const,
+    src: "/images/deken.jpg",
     body: "Een deken waarin herinneringen samenkomen. Overhemden van vader, blouses van moeder, T-shirts van een broer — kleding die te waardevol is om weg te doen, verwerkt in een warm en persoonlijk patchwork. Een herinnering die je kunt vasthouden, om je heen kunt slaan of een mooie plek kunt geven in huis.",
     details: [
       "Standaardformaat: 90 × 200 cm (eenpersoons)",
@@ -40,6 +42,7 @@ const products = [
     sub: "Klein · dichtbij · zacht",
     tone: "taupe" as const,
     pattern: "stitch" as const,
+    src: undefined,
     body: "Een kussen om vast te houden, tegen je aan te trekken of een mooie plek in huis te geven. Gemaakt van één of meerdere kledingstukken die een bijzondere betekenis hebben. Soms rustig en eenvoudig, soms verwerkt in een patchwork van verschillende stoffen. Altijd met aandacht voor de herinneringen die erin verweven zitten.",
     details: [
       "Formaat in overleg",
@@ -55,6 +58,7 @@ const products = [
     sub: "Draagbaar · persoonlijk · tijdloos",
     tone: "cream" as const,
     pattern: "flower" as const,
+    src: "/images/tas-collega.jpg",
     body: "Een tas die je iedere dag met je mee kunt dragen. Gemaakt van kleding die een bijzondere betekenis heeft, verwerkt in een uniek patchwork van herinneringen. Zo krijgen dierbare stoffen een nieuwe plek in het dagelijks leven. Iedere tas wordt op maat ontworpen, passend bij de kleding, de herinneringen en jouw wensen. Originele details zoals knopen, labels, zakken of andere herkenbare elementen kunnen worden verwerkt, zodat het verhaal zichtbaar blijft in het eindresultaat.",
     details: [
       "Formaat in overleg",
@@ -103,7 +107,7 @@ export default function ProductenPage() {
               }`}
             >
               <div>
-                <ImageCard tone={p.tone} pattern={p.pattern} aspect="wide" />
+                <ImageCard tone={p.tone} pattern={p.pattern} aspect="wide" src={p.src} alt={p.title} />
               </div>
               <div>
                 <p className="eyebrow mb-3">{p.sub}</p>

@@ -15,6 +15,8 @@ type Piece = {
   tone: "rose" | "sage" | "taupe" | "cream";
   pattern: "botanical" | "weave" | "stitch" | "flower";
   paragraphs: string[];
+  src?: string;
+  objectPosition?: string;
 };
 
 const pieces: Piece[] = [
@@ -29,6 +31,7 @@ const pieces: Piece[] = [
       "De verschillende applicaties, borduursels en stofjes vertellen ieder hun eigen verhaal. Stukjes uit haar kindertijd, verwerkt in een tas die niet in een kast verdwijnt, maar juist gebruikt kan worden in het dagelijks leven.",
       "Zo kregen herinneringen die jarenlang waren bewaard een nieuwe plek en een nieuw doel.",
     ],
+    src: "/images/tas-collega.jpg",
   },
   {
     title: "Een tas die gebruikt mag worden",
@@ -40,6 +43,7 @@ const pieces: Piece[] = [
       "Bij het ontwerpen heb ik rekening gehouden met de kleuren waar zij van houdt, zodat het niet alleen een tas vol herinneringen werd, maar ook een tas die ze graag zou gebruiken. Aan de binnenkant maakte ik verschillende vakjes, zodat de tas niet alleen mooi is, maar ook praktisch in het dagelijks gebruik.",
       "Ik gaf de tas cadeau voor haar verjaardag. Inmiddels wordt hij veel gebruikt, en dat vind ik misschien wel het mooiste compliment dat een handgemaakt product kan krijgen.",
     ],
+    src: "/images/tas-christina.jpg",
   },
   {
     title: "Herinneringen aan mijn oma",
@@ -65,6 +69,7 @@ const pieces: Piece[] = [
       "Voor deze deken gebruikte ik kleding die ik zelf niet meer droeg. Verschillende stoffen, kleuren en herinneringen kwamen samen in één nieuw product. Niet om iets ouds te vervangen, maar om er iets nieuws van te maken.",
       "Het resultaat is een deken waar ik graag onder lig op de bank, maar die ook prachtig staat als sprei. Voor mij was dit project niet alleen een oefening in techniek, maar ook een bevestiging van hoe bijzonder het is om bestaande stoffen een tweede leven te geven.",
     ],
+    src: "/images/deken.jpg",
   },
 ];
 
@@ -105,8 +110,8 @@ export default function PortfolioPage() {
                 i % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""
               }`}
             >
-              <div className={i % 2 === 1 ? "md:sticky md:top-28" : "md:sticky md:top-28"}>
-                <ImageCard tone={p.tone} pattern={p.pattern} aspect="portrait" />
+              <div className="md:sticky md:top-28">
+                <ImageCard tone={p.tone} pattern={p.pattern} aspect="portrait" src={p.src} alt={p.title} objectPosition={p.objectPosition} />
               </div>
               <div>
                 <p className="eyebrow mb-3">{p.type}</p>
@@ -162,12 +167,12 @@ export default function PortfolioPage() {
             </div>
           </div>
           <div className="grid grid-cols-3 gap-3">
-            <ImageCard tone="rose" pattern="botanical" aspect="square" />
-            <ImageCard tone="sage" pattern="weave" aspect="square" className="mt-6" />
-            <ImageCard tone="taupe" pattern="stitch" aspect="square" />
-            <ImageCard tone="cream" pattern="flower" aspect="square" className="mt-6" />
-            <ImageCard tone="rose" pattern="flower" aspect="square" />
-            <ImageCard tone="sage" pattern="botanical" aspect="square" className="mt-6" />
+            <ImageCard tone="rose" pattern="botanical" aspect="square" src="/images/tas-collega-detail.jpg" alt="Detail van een herinneringstas met teddybeertjes" />
+            <ImageCard tone="sage" pattern="weave" aspect="square" className="mt-6" src="/images/jasje-detail.jpg" alt="Borduurdetail op een herinneringsjasje" />
+            <ImageCard tone="taupe" pattern="stitch" aspect="square" src="/images/tas-disney.jpg" alt="Herinneringstas met hartmotief" />
+            <ImageCard tone="cream" pattern="flower" aspect="square" className="mt-6" src="/images/jasje-label.jpg" alt="Custom made by Kim Jansen label" objectPosition="center" />
+            <ImageCard tone="rose" pattern="flower" aspect="square" src="/images/kim-atelier.jpg" alt="Kim aan het werk in haar atelier" />
+            <ImageCard tone="sage" pattern="botanical" aspect="square" className="mt-6" src="/images/tas-christina.jpg" alt="Patchworktas in het veld" />
           </div>
         </div>
       </section>

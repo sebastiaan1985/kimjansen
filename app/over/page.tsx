@@ -157,6 +157,27 @@ export default function OverPage() {
         </div>
       </section>
 
+      {/* ATELIER FOTOBAND */}
+      <section className="bg-[var(--color-cream-50)] pb-24 md:pb-28">
+        <div className="container-prose">
+          <Reveal>
+            <div className="relative overflow-hidden rounded-[var(--radius-xl)] shadow-[var(--shadow-soft-lg)]">
+              <img
+                src="/images/kim-atelier.jpg"
+                alt="Kim aan het werk in haar atelier"
+                loading="lazy"
+                className="w-full h-[clamp(18rem,42vw,32rem)] object-cover"
+                style={{ objectPosition: "center 35%" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+              <p className="absolute bottom-5 left-6 right-6 font-[family-name:var(--font-caveat)] text-2xl text-[var(--color-cream-50)] drop-shadow">
+                In het atelier — waar de herinneringen vorm krijgen.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* WAARDEN */}
       <section className="bg-[var(--color-linen)] py-24 md:py-32">
         <div className="container-prose">
