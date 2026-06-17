@@ -138,7 +138,7 @@ export default function ImageCard({
             src={src}
             alt={alt ?? caption ?? "Atelier Kim Jansen"}
             loading="lazy"
-            className="absolute inset-0 w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-[1.03]"
+            className="absolute inset-0 w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.03]"
             style={{ objectPosition }}
           />
         </div>

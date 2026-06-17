@@ -15,7 +15,7 @@ const products = [
     sub: "Spijker · katoen",
     tone: "rose" as const,
     pattern: "botanical" as const,
-    src: "/images/jasje.jpg",
+    src: "/images/jasje.png",
     body: "Een jasje dat een verhaal met zich meedraagt. Een spijkerjasje, blazer of ander katoenen jasje wordt voorzien van zorgvuldig gekozen stukken kleding die een bijzondere betekenis hebben. Door middel van patchwork verwerk ik de stoffen tot een uniek ontwerp dat past bij de persoon die het gaat dragen. Zo ontstaat een draagbare herinnering waarin stoffen, kleuren en details samenkomen.",
     details: [
       "Maatwerk in jouw maat",

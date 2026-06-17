@@ -17,7 +17,7 @@ export default function Logo({ size = "md", href = "/", className = "" }: Props)
     <img
       src="/logo.png"
       alt="Atelier Kim Jansen"
-      className={`${heightMap[size]} w-auto mix-blend-multiply ${className}`}
+      className={`${heightMap[size]} w-auto ${className}`}
     />
   );
 

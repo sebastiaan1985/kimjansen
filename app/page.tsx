@@ -155,7 +155,7 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Jasjes", desc: "Spijker of katoen, voorzien van patchwork van bijzondere kleding. Een draagbare herinnering.", tone: "rose" as const, pattern: "botanical" as const, src: "/images/jasje.jpg" },
+              { title: "Jasjes", desc: "Spijker of katoen, voorzien van patchwork van bijzondere kleding. Een draagbare herinnering.", tone: "rose" as const, pattern: "botanical" as const, src: "/images/jasje.png" },
               { title: "Dekens", desc: "Een warm patchwork van overhemden, blouses en T-shirts. Om je heen, of een plek in huis.", tone: "sage" as const, pattern: "weave" as const, src: "/images/deken.jpg" },
               { title: "Kussens", desc: "Klein, dichtbij. Om aan vast te houden, op de bank, of mee te slapen.", tone: "taupe" as const, pattern: "stitch" as const, src: undefined },
               { title: "Tassen", desc: "Een patchwork-tas die je elke dag mee kunt nemen. Met praktische vakken aan de binnenkant.", tone: "cream" as const, pattern: "flower" as const, src: "/images/tas-collega.jpg" },
