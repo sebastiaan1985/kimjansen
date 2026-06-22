@@ -12,40 +12,40 @@ const steps = [
     title: "Het eerste contact",
     sub: "Een formulier, een mail, een berichtje",
     body: "Het begint zoals jij wilt. Vul het formulier in, stuur een mail, app me via Instagram. Vertel zo veel of zo weinig als comfortabel voelt. Soms is dat een paar zinnen, soms een paar pagina's.",
-    note: "Ik antwoord meestal binnen drie werkdagen — persoonlijk, geen autoreply.",
+    note: "Ik antwoord meestal binnen drie werkdagen, persoonlijk, geen autoreply.",
   },
   {
     n: "02",
     title: "Het gesprek",
     sub: "Bij jou, bij mij, of online",
-    body: "Dit is het belangrijkste deel. We gaan zitten, met thee of koffie, en je vertelt. Over wie deze persoon was, of is. Over de kleding die voor je ligt. Over wat je hoopt, wat je vreest, wat je niet weet. Er is geen vragenlijst. Er is alleen tijd en ruimte.",
+    body: "Dit is het belangrijkste deel. We gaan zitten, met thee of koffie of we maken een wandeling en je vertelt. Over wie deze persoon was, of is. Over de kleding die voor je ligt. Over de persoon achter de kleding. Over de herinneringen die je dichtbij wilt houden. Er is geen vragenlijst. Er is alleen tijd en ruimte.",
     note: "Het gesprek duurt meestal anderhalf tot twee uur. Bij jou thuis of in mijn atelier (Nederland). Online kan ook.",
   },
   {
     n: "03",
     title: "Jij kiest, of laat mij kiezen",
-    sub: "Jasje, deken, kussen — of iets dat we samen ontdekken",
-    body: "Vaak weet je al wat je wilt — een jasje van vaders overhemden, een deken van moeders blouses. Soms ook niet. Dan voelen we het samen. Het kan zelfs zijn dat we tijdens het gesprek tot iets anders komen dan waar je mee begon. Dat is geen probleem. Dat is precies hoe het hoort te gaan.",
+    sub: "Jasje, deken, kussen, of iets dat we samen ontdekken",
+    body: "Vaak weet je al wat je wilt, een jasje van vaders overhemden, een deken van moeders blouses. Soms ook niet. Dan voelen we het samen. Het kan zelfs zijn dat we tijdens het gesprek tot iets anders komen dan waar je mee begon. Dat is geen probleem. Dat is precies hoe het hoort te gaan.",
   },
   {
     n: "04",
-    title: "De stoffen komen naar mij",
+    title: "Aandacht voor details",
     sub: "Voorzichtig, met aandacht",
-    body: "Je stuurt de kleding op, of ik haal het bij je op. We maken duidelijke afspraken over wat er gebeurt met wat overblijft — sommige mensen willen alle restanten terug, anderen geven me toestemming om ze te gebruiken voor toekomstige werken.",
-    note: "Alles wordt verzekerd verzonden. Knopen, labels, naamlabels — ik bewaar alles tot ik weet wat ik ermee doe.",
+    body: "Samen bekijken we zorgvuldig welke stoffen we gaan gebruiken. Zijn er extra waardevolle onderdelen, zoals zakjes, labels, knopen of andere details die je graag terug wilt zien in het eindproduct? Hier besteed ik veel aandacht aan, zodat het eindresultaat niet alleen mooi is, maar ook zoveel mogelijk betekenis heeft.",
+    note: "Alles wordt verzekerd verzonden. Knopen, labels, naamlabels, ik bewaar alles tot ik weet wat ik ermee doe.",
   },
   {
     n: "05",
     title: "Ik ga aan het werk",
     sub: "Geen voorbeeld vooraf, en daar is een reden voor",
-    body: "Vanaf hier wordt het stil. Ik laat geen schetsen zien, geen mood boards, geen tussenfoto's. Niet omdat ik geheimzinnig wil doen — maar omdat het maakproces vrij moet zijn. Een ontwerp vooraf legt vast wat juist moet kunnen ademen. Ik werk vanuit wat het gesprek heeft achtergelaten, en uit de stoffen die voor me liggen. Vertrouwen is wat je hier geeft. Aandacht is wat je terugkrijgt.",
-    note: "Wachttijd: meestal vier tot acht weken. Bij grotere stukken soms langer. Ik hou je op de hoogte van waar ik sta — alleen niet hoe het eruit gaat zien.",
+    body: "Vanaf hier wordt het stil. Ik laat geen schetsen zien, geen mood boards, geen tussenfoto's. Niet omdat ik geheimzinnig wil doen, maar omdat het maakproces vrij moet zijn. Een ontwerp vooraf legt vast wat juist moet kunnen ademen. Ik werk vanuit wat het gesprek heeft achtergelaten, en uit de stoffen die voor me liggen. Vertrouwen is wat je hier geeft. Aandacht is wat je terugkrijgt.",
+    note: "Wachttijd: meestal vier tot acht weken. Bij grotere stukken soms langer. Ik hou je op de hoogte van waar ik sta, alleen niet hoe het eruit gaat zien.",
   },
   {
     n: "06",
     title: "Het komt thuis",
     sub: "Persoonlijk, ingepakt met aandacht",
-    body: "Wanneer het klaar is, hoor je het. We spreken af of je het komt halen of dat ik het opstuur. Het wordt ingepakt zoals het bedoeld is om geopend te worden — niet alsof het uit een webshop komt. Vaak schrijf ik er een korte notitie bij over wat ik in het gesprek heb meegenomen.",
+    body: "Wanneer het klaar is, hoor je het. We spreken af of je het komt halen of dat ik het opstuur. Het wordt ingepakt zoals het bedoeld is om geopend te worden, niet alsof het uit een webshop komt. Vaak schrijf ik er een korte notitie bij over wat ik in het gesprek heb meegenomen.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function WerkwijzePage() {
             </em>
           </h1>
           <p className="mt-8 max-w-2xl text-[1.05rem] leading-[1.85]">
-            Dit is hoe het gaat — van het allereerste berichtje tot het moment
+            Dit is hoe het gaat, van het allereerste berichtje tot het moment
             dat je het in je handen hebt. Er zit geen haast in. Er zit geen
             opdringerigheid in. Er zit vooral veel luisteren in.
           </p>
@@ -130,7 +130,7 @@ export default function WerkwijzePage() {
               ik werk. Niet als een opdracht — als een richting.
             </p>
             <p className="font-[family-name:var(--font-cormorant)] italic text-xl text-[var(--color-rose-100)]">
-              &ldquo;Je krijgt geen verrassing — je krijgt wat ik van het
+              &ldquo;Je krijgt geen verrassing, je krijgt wat ik van het
               gesprek heb meegenomen.&rdquo;
             </p>
           </div>
@@ -162,12 +162,12 @@ export default function WerkwijzePage() {
                 a: "Ja, vaak is er meer mogelijk dan je denkt. Heb je weinig kleding beschikbaar? Dan kunnen we samen kijken naar een andere stof die mooi aansluit bij de originele kleding, waarbij de stoffen van jouw dierbare centraal blijven staan. Voor een deken zijn meestal 20 tot 30 kledingstukken nodig, voor een kussen ongeveer 10, en voor een tas tussen de 10 en 20.",
               },
               {
-                q: "Wat als ik het niet mooi vind?",
-                a: "Dat is zeldzaam — bijna iedereen heeft een reactie die voorbij 'mooi' gaat. Maar als het echt niet werkt voor jou, praten we erover. Sommige dingen kunnen we aanpassen.",
+                q: "What als ik het niet mooi vind?",
+                a: "Dat is zeldzaam, bijna iedereen heeft een reactie die voorbij 'mooi' gaat. Maar als het echt niet werkt voor jou, praten we erover. Sommige dingen kunnen we aanpassen.",
               },
               {
                 q: "Werk je ook voor mensen die nog leven?",
-                a: "Zeker. Een jasje van je eigen vroegere kleding, een deken voor een nieuwgeboren kleinkind, of een product van de kinderkleertjes die je hebt bewaard — al die verhalen zijn welkom. Afscheid is niet alleen bij overlijden, maar ook bij leeftijden die niet meer terugkomen.",
+                a: "Zeker. Een jasje van je eigen vroegere kleding, een deken voor een nieuwgeboren kleinkind, of een product van de kinderkleertjes die je hebt bewaard, al die verhalen zijn welkom. Afscheid is niet alleen bij overlijden, maar ook bij leeftijden die niet meer terugkomen.",
               },
               {
                 q: "Hoe ver in Nederland kom je voor een gesprek?",
@@ -191,7 +191,7 @@ export default function WerkwijzePage() {
           </h2>
           <p className="mt-5 max-w-xl mx-auto">
             Het eerste contact is altijd vrijblijvend. Vertel me wat je in
-            gedachten hebt — ik antwoord persoonlijk.
+            gedachten hebt, ik antwoord persoonlijk.
           </p>
           <Link href="/contact" className="btn btn-primary mt-10 text-base px-8 py-4">
             Vraag de mogelijkheden aan

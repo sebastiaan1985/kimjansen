@@ -6,16 +6,28 @@ import Reveal from "@/components/Reveal";
 export const metadata = {
   title: "Producten — Atelier Kim Jansen",
   description:
-    "Herinneringsjasjes, dekens, kussens en tassen — handgemaakt van kleding van wie je dierbaar was. Met maatwerk en zorg & garantie.",
+    "Herinneringsjasjes, dekens, kussens en tassen, handgemaakt van kleding van wie je dierbaar was. Met maatwerk en zorg & garantie.",
 };
 
-const products = [
+type Product = {
+  title: string;
+  sub: string;
+  tone: "rose" | "sage" | "taupe" | "cream";
+  pattern: "botanical" | "weave" | "stitch" | "flower";
+  src?: string;
+  body: string;
+  details: string[];
+  price: string;
+  priceNote?: string;
+};
+
+const products: Product[] = [
   {
     title: "Herinneringsjasjes",
     sub: "Spijker · katoen",
     tone: "rose" as const,
     pattern: "botanical" as const,
-    src: "/images/jasje.png",
+    src: "/images/jasje-transparant.png",
     body: "Een jasje dat een verhaal met zich meedraagt. Een spijkerjasje, blazer of ander katoenen jasje wordt voorzien van zorgvuldig gekozen stukken kleding die een bijzondere betekenis hebben. Door middel van patchwork verwerk ik de stoffen tot een uniek ontwerp dat past bij de persoon die het gaat dragen. Zo ontstaat een draagbare herinnering waarin stoffen, kleuren en details samenkomen.",
     details: [
       "Maatwerk in jouw maat",
@@ -28,7 +40,7 @@ const products = [
     sub: "Warm · persoonlijk · samen",
     tone: "sage" as const,
     pattern: "weave" as const,
-    src: "/images/deken.jpg",
+    src: "/images/deken-producten.png",
     body: "Een deken waarin herinneringen samenkomen. Overhemden van vader, blouses van moeder, T-shirts van een broer — kleding die te waardevol is om weg te doen, verwerkt in een warm en persoonlijk patchwork. Een herinnering die je kunt vasthouden, om je heen kunt slaan of een mooie plek kunt geven in huis.",
     details: [
       "Standaardformaat: 90 × 200 cm (eenpersoons)",
@@ -42,23 +54,23 @@ const products = [
     sub: "Klein · dichtbij · zacht",
     tone: "taupe" as const,
     pattern: "stitch" as const,
-    src: undefined,
+    src: "/images/kussen-producten.png",
     body: "Een kussen om vast te houden, tegen je aan te trekken of een mooie plek in huis te geven. Gemaakt van één of meerdere kledingstukken die een bijzondere betekenis hebben. Soms rustig en eenvoudig, soms verwerkt in een patchwork van verschillende stoffen. Altijd met aandacht voor de herinneringen die erin verweven zitten.",
     details: [
       "Formaat in overleg",
       "Patchwork of verwerkt uit één kledingstuk",
       "Originele knopen, labels of andere details kunnen worden verwerkt",
       "Inclusief binnenkussen en rits aan de onderzijde",
+      "Kussens kunnen ook in combinatie met een deken worden gemaakt, passend bij elkaar",
     ],
     price: "vanaf € 225,-",
-    priceNote: "Samen met een deken gemaakt: vanaf € 175,- per kussen",
   },
   {
     title: "Herinneringstassen",
     sub: "Draagbaar · persoonlijk · tijdloos",
     tone: "cream" as const,
     pattern: "flower" as const,
-    src: "/images/tas-collega.jpg",
+    src: "/images/tas-oma-producten.png",
     body: "Een tas die je iedere dag met je mee kunt dragen. Gemaakt van kleding die een bijzondere betekenis heeft, verwerkt in een uniek patchwork van herinneringen. Zo krijgen dierbare stoffen een nieuwe plek in het dagelijks leven. Iedere tas wordt op maat ontworpen, passend bij de kleding, de herinneringen en jouw wensen. Originele details zoals knopen, labels, zakken of andere herkenbare elementen kunnen worden verwerkt, zodat het verhaal zichtbaar blijft in het eindresultaat.",
     details: [
       "Formaat in overleg",
@@ -84,7 +96,7 @@ export default function ProductenPage() {
           </h1>
           <p className="mt-8 max-w-2xl text-[1.05rem] leading-[1.85]">
             Dit zijn de producten waar de meeste gesprekken bij beginnen. Maar
-            het kan ook iets anders worden — een wandkleed, een babydeken voor
+            het kan ook iets anders worden, een wandkleed, een babydeken voor
             een kleinkind, of iets wat nog geen vorm heeft. In het gesprek
             voelen we wat past.
           </p>
@@ -174,7 +186,7 @@ export default function ProductenPage() {
               <p>
                 Alles wat van stof gemaakt kan worden, valt te bespreken. Soms
                 weet ik vooraf wat het wordt, soms ontdek ik het pas in het
-                gesprek. Vertel me wat je in gedachten hebt — of wat je nog
+                gesprek. Vertel me wat je in gedachten hebt, of wat je nog
                 niet kunt benoemen.
               </p>
               <Link href="/contact" className="btn btn-primary mt-4">
@@ -210,7 +222,7 @@ export default function ProductenPage() {
               },
               {
                 title: "Levenslange reparatie",
-                body: "Slijtage hoort erbij — bij kleding én herinneringen. Een losse zoom, een vastgenaaide knoop, een gebroken steek: stuur op, ik herstel het zonder kosten.",
+                body: "Slijtage hoort erbij, bij kleding én herinneringen. Een losse zoom, een vastgenaaide knoop, een gebroken steek: stuur op, ik herstel het zonder kosten.",
               },
               {
                 title: "Verzorgingsgids",
@@ -255,12 +267,12 @@ export default function ProductenPage() {
                 <strong className="text-[var(--color-ink)]">Wachttijd:</strong>{" "}
                 meestal vier tot acht weken na het gesprek, afhankelijk van
                 wat er al loopt in het atelier. Bij rouwende ouders met jonge
-                kinderen, of bij een specifieke gedenkdatum — laat het weten,
+                kinderen, of bij een specifieke gedenkdatum, laat het weten,
                 dan kijk ik wat er mogelijk is.
               </li>
               <li>
                 <strong className="text-[var(--color-ink)]">Ik laat geen ontwerp vooraf zien.</strong>{" "}
-                Het maakproces is van mij — vanuit wat het gesprek heeft
+                Het maakproces is van mij, vanuit wat het gesprek heeft
                 achtergelaten. Lees waarom dat zo is{" "}
                 <Link href="/werkwijze" className="link-underline">
                   op de werkwijze-pagina

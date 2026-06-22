@@ -43,7 +43,7 @@ const pieces: Piece[] = [
       "Bij het ontwerpen heb ik rekening gehouden met de kleuren waar zij van houdt, zodat het niet alleen een tas vol herinneringen werd, maar ook een tas die ze graag zou gebruiken. Aan de binnenkant maakte ik verschillende vakjes, zodat de tas niet alleen mooi is, maar ook praktisch in het dagelijks gebruik.",
       "Ik gaf de tas cadeau voor haar verjaardag. Inmiddels wordt hij veel gebruikt, en dat vind ik misschien wel het mooiste compliment dat een handgemaakt product kan krijgen.",
     ],
-    src: "/images/tas-christina.jpg",
+    src: "/images/cristina-homepage-portfolio.png",
   },
   {
     title: "Herinneringen aan mijn oma",
@@ -57,6 +57,7 @@ const pieces: Piece[] = [
       "Wat dit project voor mij extra bijzonder maakte, was het maakproces zelf. Mijn hele atelier rook naar de kleding van mijn oma. Terwijl ik met de stoffen bezig was, dacht ik aan wie ze was en aan de herinneringen die we samen hebben gemaakt. Met haar in gedachten maakte ik producten die niet alleen mooi zijn, maar ook een blijvende herinnering vormen.",
       "Dit project liet mij zien hoe waardevol het is om herinneringen niet alleen te bewaren, maar ze ook een plek te geven in het dagelijks leven.",
     ],
+    src: "/images/tas-kussen-homepage-portfolio.png",
   },
   {
     title: "Mijn eerste patchworkdeken",
@@ -89,7 +90,7 @@ export default function PortfolioPage() {
           <p className="mt-8 max-w-2xl text-[1.05rem] leading-[1.85]">
             Een tas van kinderkleertjes, een tas die elke dag gebruikt mag
             worden, herinneringen aan mijn oma, en mijn eerste patchworkdeken
-            van eigen kleding. Kleine en grote projecten — wat ze delen is
+            van eigen kleding. Kleine en grote projecten, wat ze delen is
             wat ze zijn geworden.
           </p>
         </div>

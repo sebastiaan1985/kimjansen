@@ -3,7 +3,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata = {
   title: "Contact — Atelier Kim Jansen",
-  description: "Vraag de mogelijkheden aan. Vertel me wat je in gedachten hebt — ik antwoord persoonlijk.",
+  description: "Vraag de mogelijkheden aan. Vertel me wat je in gedachten hebt, ik antwoord persoonlijk.",
 };
 
 export default function ContactPage() {
@@ -32,8 +32,8 @@ export default function ContactPage() {
         <div className="container-prose grid md:grid-cols-[1.4fr_1fr] gap-12 md:gap-20 items-start">
           {/* FORM */}
           <form
-            method="post"
-            action="#"
+            method="POST"
+            action="https://formspree.io/info@atelierkimjansen.nl"
             className="bg-white/70 backdrop-blur-sm border border-[var(--color-taupe-100)] rounded-[var(--radius-lg)] p-8 md:p-12 shadow-[var(--shadow-soft)] space-y-7"
           >
             <div className="grid sm:grid-cols-2 gap-5">
@@ -46,17 +46,16 @@ export default function ContactPage() {
               label="Wat heb je in gedachten?"
               name="product"
               options={[
-                "Een herinneringsjasje",
-                "Een herinneringsdeken",
-                "Een herinneringskussen",
-                "Een sjaal",
-                "Iets anders / weet ik nog niet",
+                "Herinneringsdeken",
+                "Kussen",
+                "Jasje",
+                "Tas",
               ]}
             />
 
             <FieldTextarea
               label="Vertel me iets meer"
-              hint="Voor wie? Welke kleding heb je in gedachten? Schrijf gerust een paar zinnen of een hele bladzijde — wat goed voelt."
+              hint="Voor wie? Welke kleding heb je in gedachten? Schrijf gerust een paar zinnen of een hele bladzijde, wat goed voelt."
               name="message"
               rows={6}
               required
@@ -66,11 +65,10 @@ export default function ContactPage() {
               label="Voorkeur voor het gesprek"
               name="preference"
               options={[
-                "Bij mij in het atelier",
-                "Bij mij thuis (op bezoek)",
-                "Online (videogesprek)",
+                "Bij jou thuis",
+                "Bij mij thuis",
+                "Online",
                 "Telefonisch eerst",
-                "Maakt niet uit",
               ]}
             />
 
@@ -89,12 +87,12 @@ export default function ContactPage() {
 
             <div className="pt-2">
               <button type="submit" className="btn btn-primary w-full sm:w-auto text-base px-8 py-4">
-                Verstuur — vraag de mogelijkheden aan
+                Verstuur, vraag de mogelijkheden aan
               </button>
               <p className="mt-4 text-xs text-[var(--color-ink-mute)]">
-                Liever bellen of appen? Geen probleem — gebruik{" "}
+                Liever bellen of appen? Geen probleem, gebruik{" "}
                 <a href="tel:+31625145304" className="link-underline">
-                  06 — 2514 5304
+                  06 2514 5304
                 </a>{" "}
                 of de WhatsApp-knop hiernaast.
               </p>
@@ -116,10 +114,10 @@ export default function ContactPage() {
                 <li>
                   <span className="block eyebrow mb-1">Telefoon</span>
                   <a className="link-underline" href="tel:+31625145304">
-                    06 — 2514 5304
+                    06 2514 5304
                   </a>
                   <span className="block text-xs text-[var(--color-ink-mute)] mt-1">
-                    Ma–vr, 09–17u. Op andere momenten gerust een berichtje.
+                    Mensen mogen altijd bellen. Ben ik even niet bereikbaar, spreek mijn voicemail in en ik bel zo snel mogelijk terug.
                   </span>
                 </li>
                 <li>
@@ -129,7 +127,7 @@ export default function ContactPage() {
                     label="Stuur Kim een WhatsApp"
                   />
                   <span className="block text-xs text-[var(--color-ink-mute)] mt-2">
-                    Vaak het snelst — antwoord meestal binnen een dag.
+                    Vaak het snelst, antwoord meestal binnen een dag.
                   </span>
                 </li>
                 <li>
@@ -159,7 +157,6 @@ export default function ContactPage() {
             <div className="rounded-[var(--radius-lg)] p-6 bg-[var(--color-rose-50)] border border-[var(--color-rose-100)]">
               <h3 className="display text-xl mb-2">Wat gebeurt er na verzenden?</h3>
               <ol className="space-y-2 text-sm text-[var(--color-ink-soft)] list-decimal pl-4">
-                <li>Ik lees je bericht — meestal dezelfde dag.</li>
                 <li>Binnen drie werkdagen krijg je een persoonlijk antwoord.</li>
                 <li>We plannen een gesprek op een tijd die past.</li>
                 <li>Vanaf daar gaat het zoals beschreven in de werkwijze.</li>
@@ -169,8 +166,7 @@ export default function ContactPage() {
             <div className="rounded-[var(--radius-lg)] p-6 bg-[var(--color-linen)] border border-[var(--color-taupe-100)]">
               <h3 className="display text-xl mb-2">Atelier</h3>
               <p className="text-sm leading-relaxed text-[var(--color-ink-soft)]">
-                Nederland — adres op aanvraag<br />
-                Op afspraak welkom op woensdag en zaterdag.
+                Mijn atelier is gevestigd bij mij thuis in Nederland. Adres op aanvraag. Dit is uitsluitend te bezoeken op afspraak.
               </p>
             </div>
           </aside>

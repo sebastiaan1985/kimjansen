@@ -56,7 +56,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-[var(--color-ink-soft)] drop-shadow-[0_1px_0_rgba(246,241,232,0.7)]">
               Van kleding met een verhaal maak ik iets dat je tegen je aan
-              kunt drukken. Een jasje, een deken, een kussen, een tas —
+              kunt drukken. Een jasje, een deken, een kussen, een tas,
               gedragen door wie er niet meer is, of door wie er ooit nog was.
               Gedragen door jou.
             </p>
@@ -155,10 +155,10 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Jasjes", desc: "Spijker of katoen, voorzien van patchwork van bijzondere kleding. Een draagbare herinnering.", tone: "rose" as const, pattern: "botanical" as const, src: "/images/jasje.png" },
+              { title: "Jasjes", desc: "Spijker of katoen, voorzien van patchwork van bijzondere kleding. Een draagbare herinnering.", tone: "rose" as const, pattern: "botanical" as const, src: "/images/jasje-transparant.png" },
               { title: "Dekens", desc: "Een warm patchwork van overhemden, blouses en T-shirts. Om je heen, of een plek in huis.", tone: "sage" as const, pattern: "weave" as const, src: "/images/deken.jpg" },
-              { title: "Kussens", desc: "Klein, dichtbij. Om aan vast te houden, op de bank, of mee te slapen.", tone: "taupe" as const, pattern: "stitch" as const, src: undefined },
-              { title: "Tassen", desc: "Een patchwork-tas die je elke dag mee kunt nemen. Met praktische vakken aan de binnenkant.", tone: "cream" as const, pattern: "flower" as const, src: "/images/tas-collega.jpg" },
+              { title: "Kussens", desc: "Klein, dichtbij. Om aan vast te houden, op de bank, of mee te slapen.", tone: "taupe" as const, pattern: "stitch" as const, src: "/images/kussens-homepage.jpeg" },
+              { title: "Tassen", desc: "Een patchwork-tas die je elke dag mee kunt nemen. Met praktische vakken aan de binnenkant.", tone: "cream" as const, pattern: "flower" as const, src: "/images/tassen-homepage.jpeg" },
             ].map((p, i) => (
               <Reveal key={p.title} as="article" delay={i * 80} className="group">
                 <ImageCard tone={p.tone} pattern={p.pattern} aspect="portrait" src={p.src} alt={`Herinnerings${p.title.toLowerCase()} van Atelier Kim Jansen`} blend={p.title === "Jasjes"} />
@@ -194,19 +194,19 @@ export default function HomePage() {
               {
                 eyebrow: "Voor jezelf",
                 title: "Iets om vast te houden",
-                body: "Je hebt iemand verloren en wilt iets tastbaars — om te dragen, op je bed, in de stoel waar zij of hij altijd zat. Begin met een gesprek.",
-                cta: "Vraag een gesprek aan",
+                body: "Je mist iemand die je dierbaar was. Van kleding met herinneringen maak ik een tas, deken, kussen of ander product dat je dichtbij kunt houden.",
+                cta: "Begin met een gesprek",
               },
               {
                 eyebrow: "Als cadeau",
                 title: "Voor iemand die rouwt",
-                body: "Soms is het mooiste wat je voor een ander kunt doen, dit cadeau geven. Een herinneringsdeken voor je moeder. Een kussen voor je zus. Cadeaubon mogelijk.",
-                cta: "Vraag een cadeaubon aan",
+                body: "Soms is het mooiste wat je voor een ander kunt doen, dit cadeau geven. Een herinneringsdeken voor je moeder. Een kussen voor je zus.",
+                cta: "Vraag een gesprek aan",
               },
               {
                 eyebrow: "Voor uitvaartondernemers",
                 title: "Als bijzondere nazorg",
-                body: "Werkt jouw uitvaartonderneming met nabestaanden die iets blijvends willen? Ik werk graag samen — als duurzame uitbreiding van wat jij biedt.",
+                body: "Werkt jouw uitvaartonderneming met nabestaanden die iets blijvends willen? Ik werk graag samen, als duurzame uitbreiding van wat jij biedt.",
                 cta: "Partnership aanvragen",
               },
             ].map((c, i) => (
@@ -246,7 +246,7 @@ export default function HomePage() {
               {
                 n: "01",
                 title: "We praten",
-                body: "Bij jou thuis, bij mij in het atelier, of online. Een open gesprek over wie deze mens was. Geen vragenlijst — gewoon ruimte.",
+                body: "Bij jou thuis, bij mij thuis aan de keukentafel, tijdens een wandeling of online. Een open gesprek over de persoon achter de kleding, geen vragenlijst, gewoon tijd en ruimte",
               },
               {
                 n: "02",
@@ -256,12 +256,12 @@ export default function HomePage() {
               {
                 n: "03",
                 title: "Ik ga aan het werk",
-                body: "Ik laat geen ontwerp vooraf zien. Het maakproces is van mij — vanuit wat het gesprek heeft achtergelaten. Vertrouw me hierin.",
+                body: "Ik laat geen ontwerp vooraf zien. Het maakproces is van mij, vanuit wat het gesprek heeft achtergelaten. Vertrouw me hierin.",
               },
               {
                 n: "04",
                 title: "Het komt thuis",
-                body: "Klaar als het klaar is — meestal vier tot acht weken. Ik stuur het op, of je haalt het op. Persoonlijk, met aandacht.",
+                body: "Klaar als het klaar is, meestal vier tot acht weken. Ik stuur het op, of je haalt het op. Persoonlijk, met aandacht.",
               },
             ].map((s, i) => (
               <Reveal key={s.n} as="li" delay={i * 100} className="relative pl-16">
@@ -309,7 +309,7 @@ export default function HomePage() {
               {
                 eyebrow: "Tas · kinderkleertjes",
                 title: "Een tas vol kinderherinneringen",
-                excerpt: "Voor een collega — kinderkleertjes gecombineerd met zachte ribstof tot een tas die elke dag wordt gebruikt.",
+                excerpt: "Voor een collega, kinderkleertjes gecombineerd met zachte ribstof tot een tas die elke dag wordt gebruikt.",
                 tone: "rose" as const,
                 pattern: "botanical" as const,
                 src: "/images/tas-collega.jpg",
@@ -320,7 +320,7 @@ export default function HomePage() {
                 excerpt: "Voor Christina: dierbare babykleertjes verwerkt tot een patchwork-tas met praktische binnenvakken. Cadeau voor haar verjaardag.",
                 tone: "cream" as const,
                 pattern: "flower" as const,
-                src: "/images/tas-christina.jpg",
+                src: "/images/cristina-homepage-portfolio.png",
               },
               {
                 eyebrow: "Tas + kussen",
@@ -328,7 +328,7 @@ export default function HomePage() {
                 excerpt: "December 2025: van oma's kleding maakte ik eerst een tas, daarna een kussen. Het atelier rook nog wekenlang naar haar.",
                 tone: "taupe" as const,
                 pattern: "stitch" as const,
-                src: undefined,
+                src: "/images/tas-kussen-homepage-portfolio.png",
               },
               {
                 eyebrow: "Deken · eigen kleding",
@@ -372,7 +372,7 @@ export default function HomePage() {
               </h2>
               <p className="mt-6 max-w-xl">
                 Vul het formulier in met wat je in gedachten hebt. Of bel,
-                app me via WhatsApp, stuur een berichtje via Instagram — wat
+                app me via WhatsApp, stuur een berichtje via Instagram, wat
                 voor jou voelt. Ik neem altijd persoonlijk contact op.
               </p>
             </div>
