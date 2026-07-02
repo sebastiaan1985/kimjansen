@@ -1,5 +1,6 @@
 import Ornament from "@/components/Ornament";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
   title: "Contact — Atelier Kim Jansen",
@@ -31,73 +32,7 @@ export default function ContactPage() {
       <section className="bg-[var(--color-cream-50)] pb-24 md:pb-32">
         <div className="container-prose grid md:grid-cols-[1.4fr_1fr] gap-12 md:gap-20 items-start">
           {/* FORM */}
-          <form
-            method="POST"
-            action="https://formspree.io/info@atelierkimjansen.nl"
-            className="bg-white/70 backdrop-blur-sm border border-[var(--color-taupe-100)] rounded-[var(--radius-lg)] p-8 md:p-12 shadow-[var(--shadow-soft)] space-y-7"
-          >
-            <div className="grid sm:grid-cols-2 gap-5">
-              <Field label="Je naam" name="name" required />
-              <Field label="E-mail" name="email" type="email" required />
-            </div>
-            <Field label="Telefoon (optioneel)" name="phone" type="tel" />
-
-            <FieldSelect
-              label="Wat heb je in gedachten?"
-              name="product"
-              options={[
-                "Herinneringsdeken",
-                "Kussen",
-                "Jasje",
-                "Tas",
-              ]}
-            />
-
-            <FieldTextarea
-              label="Vertel me iets meer"
-              hint="Voor wie? Welke kleding heb je in gedachten? Schrijf gerust een paar zinnen of een hele bladzijde, wat goed voelt."
-              name="message"
-              rows={6}
-              required
-            />
-
-            <FieldSelect
-              label="Voorkeur voor het gesprek"
-              name="preference"
-              options={[
-                "Bij jou thuis",
-                "Bij mij thuis",
-                "Online",
-                "Telefonisch eerst",
-              ]}
-            />
-
-            <div className="flex items-start gap-3 text-sm">
-              <input
-                id="privacy"
-                type="checkbox"
-                required
-                className="mt-1 w-4 h-4 rounded border-[var(--color-taupe-200)] accent-[var(--color-rose-300)]"
-              />
-              <label htmlFor="privacy" className="text-[var(--color-ink-soft)]">
-                Ik ga ermee akkoord dat Kim mijn gegevens gebruikt om contact
-                op te nemen. Ze worden niet gedeeld.
-              </label>
-            </div>
-
-            <div className="pt-2">
-              <button type="submit" className="btn btn-primary w-full sm:w-auto text-base px-8 py-4">
-                Verstuur, vraag de mogelijkheden aan
-              </button>
-              <p className="mt-4 text-xs text-[var(--color-ink-mute)]">
-                Liever bellen of appen? Geen probleem, gebruik{" "}
-                <a href="tel:+31625145304" className="link-underline">
-                  06 2514 5304
-                </a>{" "}
-                of de WhatsApp-knop hiernaast.
-              </p>
-            </div>
-          </form>
+          <ContactForm />
 
           {/* INFO */}
           <aside className="space-y-10">
@@ -173,90 +108,5 @@ export default function ContactPage() {
         </div>
       </section>
     </>
-  );
-}
-
-function Field({
-  label,
-  name,
-  type = "text",
-  required = false,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <label className="block">
-      <span className="eyebrow block mb-2">{label}{required && " *"}</span>
-      <input
-        type={type}
-        name={name}
-        required={required}
-        className="w-full rounded-[var(--radius-md)] border border-[var(--color-taupe-100)] bg-white/80 px-4 py-3 text-[15px] text-[var(--color-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--color-rose-200)] focus:border-transparent transition"
-      />
-    </label>
-  );
-}
-
-function FieldSelect({
-  label,
-  name,
-  options,
-}: {
-  label: string;
-  name: string;
-  options: string[];
-}) {
-  return (
-    <label className="block">
-      <span className="eyebrow block mb-2">{label}</span>
-      <select
-        name={name}
-        defaultValue=""
-        className="w-full rounded-[var(--radius-md)] border border-[var(--color-taupe-100)] bg-white/80 px-4 py-3 text-[15px] text-[var(--color-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--color-rose-200)] transition"
-      >
-        <option value="" disabled>
-          Maak een keuze…
-        </option>
-        {options.map((o) => (
-          <option key={o} value={o}>
-            {o}
-          </option>
-        ))}
-      </select>
-    </label>
-  );
-}
-
-function FieldTextarea({
-  label,
-  hint,
-  name,
-  rows = 5,
-  required = false,
-}: {
-  label: string;
-  hint?: string;
-  name: string;
-  rows?: number;
-  required?: boolean;
-}) {
-  return (
-    <label className="block">
-      <span className="eyebrow block mb-2">{label}{required && " *"}</span>
-      {hint && (
-        <span className="block text-xs text-[var(--color-ink-mute)] mb-3 leading-relaxed">
-          {hint}
-        </span>
-      )}
-      <textarea
-        name={name}
-        rows={rows}
-        required={required}
-        className="w-full rounded-[var(--radius-md)] border border-[var(--color-taupe-100)] bg-white/80 px-4 py-3 text-[15px] text-[var(--color-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--color-rose-200)] focus:border-transparent transition resize-y"
-      />
-    </label>
   );
 }
