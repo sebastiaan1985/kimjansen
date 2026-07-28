@@ -41,7 +41,7 @@ const italiana = Italiana({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://atelierkimjansen.nl"),
+  metadataBase: new URL("https://www.atelierkimjansen.nl"),
   title: "Atelier Kim Jansen — Herinneringen om vast te houden",
   description:
     "Persoonlijke herinneringsproducten van Kim Jansen. Van geliefde kleding maken we een jasje, deken, kussen of sjaal — een tastbare herinnering aan wie je dierbaar was.",
@@ -57,14 +57,14 @@ export const metadata: Metadata = {
 const businessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://atelierkimjansen.nl/#business",
+  "@id": "https://www.atelierkimjansen.nl/#business",
   name: "Atelier Kim Jansen",
   description:
     "Persoonlijke herinneringsproducten gemaakt van geliefde kleding — jasjes, dekens, kussens en sjaals voor wie iemand heeft verloren.",
-  url: "https://atelierkimjansen.nl",
+  url: "https://www.atelierkimjansen.nl",
   telephone: "+31625145304",
   email: "info@atelierkimjansen.nl",
-  image: "https://atelierkimjansen.nl/og.jpg",
+  image: "https://www.atelierkimjansen.nl/og.jpg",
   address: {
     "@type": "PostalAddress",
     addressCountry: "NL",

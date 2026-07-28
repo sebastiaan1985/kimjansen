@@ -2,7 +2,7 @@
 
 De XML-sitemap wordt door Next.js gegenereerd op:
 
-- `https://atelierkimjansen.nl/sitemap.xml`
+- `https://www.atelierkimjansen.nl/sitemap.xml`
 
 ## Opgenomen pagina's
 
