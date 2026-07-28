@@ -41,6 +41,7 @@ const italiana = Italiana({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://atelierkimjansen.nl"),
   title: "Atelier Kim Jansen — Herinneringen om vast te houden",
   description:
     "Persoonlijke herinneringsproducten van Kim Jansen. Van geliefde kleding maken we een jasje, deken, kussen of sjaal — een tastbare herinnering aan wie je dierbaar was.",
