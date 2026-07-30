@@ -1,7 +1,9 @@
 """Genereert de favicon-set uit public/logo.png.
 
 Maakt app/icon.png, app/apple-icon.png en app/favicon.ico met het volledige
-woordmerk (ATELIER / Kim Jansen) op een cremekleurige tegel.
+woordmerk (ATELIER / Kim Jansen) in creme op een donkergroene tegel. Die
+donkere tegel is nodig omdat een cremekleurige favicon op 16x16 wegvalt
+tegen de lichte tabbalk van de browser.
 
 Gebruik: python3 make_favicon.py
 """
@@ -9,16 +11,20 @@ Gebruik: python3 make_favicon.py
 from PIL import Image, ImageDraw
 
 SOURCE = "public/logo.png"
-CREAM = (246, 241, 232, 255)  # --color-cream
+INK = (42, 51, 40, 255)  # --color-ink, achtergrond van de tegel
+CREAM = (246, 241, 232, 255)  # --color-cream, kleur van het woordmerk
 LOGO_WIDTH_RATIO = 0.92  # breedte van het logo t.o.v. de tegel
 CORNER_RATIO = 0.14  # afronding van de tegelhoeken
 SUPERSAMPLE = 8
 
 
 def trimmed_logo() -> Image.Image:
-    """Laadt het logo en snijdt de transparante rand eromheen weg."""
+    """Laadt het logo, snijdt de transparante rand weg en kleurt het creme."""
     logo = Image.open(SOURCE).convert("RGBA")
-    return logo.crop(logo.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox())
+    logo = logo.crop(logo.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox())
+    recolored = Image.new("RGBA", logo.size, CREAM)
+    recolored.putalpha(logo.getchannel("A"))
+    return recolored
 
 
 def tile(logo: Image.Image, size: int, rounded: bool = True) -> Image.Image:
@@ -29,7 +35,7 @@ def tile(logo: Image.Image, size: int, rounded: bool = True) -> Image.Image:
     mask = Image.new("L", (hires, hires), 0)
     radius = int(hires * CORNER_RATIO) if rounded else 0
     ImageDraw.Draw(mask).rounded_rectangle([0, 0, hires - 1, hires - 1], radius, fill=255)
-    canvas.paste(Image.new("RGBA", (hires, hires), CREAM), (0, 0), mask)
+    canvas.paste(Image.new("RGBA", (hires, hires), INK), (0, 0), mask)
 
     mark_w = int(hires * LOGO_WIDTH_RATIO)
     mark_h = max(1, round(mark_w * logo.height / logo.width))
