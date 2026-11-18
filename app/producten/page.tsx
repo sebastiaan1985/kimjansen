@@ -268,11 +268,6 @@ export default function ProductenPage() {
                 </Link>
                 .
               </li>
-              <li>
-                <strong className="text-[var(--color-ink)]">Betalen in termijnen kan.</strong>{" "}
-                Voor stukken boven € 300 mag het in twee of drie keer.
-                Bespreek het rustig in het gesprek.
-              </li>
             </ul>
           </div>
         </div>

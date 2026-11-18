@@ -30,9 +30,7 @@ export default function AVPage() {
 
           <h2 className="display text-2xl mt-10 mb-3">Aanbetaling en eindbetaling</h2>
           <p>
-            30% bij aanvang, het resterende bedrag bij oplevering. Voor
-            opdrachten boven € 300 is betaling in twee of drie termijnen in
-            overleg mogelijk.
+            30% bij aanvang, het resterende bedrag bij oplevering.
           </p>
 
           <h2 className="display text-2xl mt-10 mb-3">Materialen</h2>
