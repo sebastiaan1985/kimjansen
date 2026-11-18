@@ -17,8 +17,6 @@ type Product = {
   src?: string;
   body: string;
   details: string[];
-  price: string;
-  priceNote?: string;
 };
 
 const products: Product[] = [
@@ -33,7 +31,6 @@ const products: Product[] = [
       "Maatwerk in jouw maat",
       "Knopen, labels of andere details uit de originele kleding kunnen worden verwerkt",
     ],
-    price: "vanaf € 595,-",
   },
   {
     title: "Herinneringsdekens",
@@ -47,7 +44,6 @@ const products: Product[] = [
       "Andere formaten mogelijk in overleg",
       "Achterzijde katoen, dit kan ook een dekbedovertrek zijn",
     ],
-    price: "vanaf € 1.195,-",
   },
   {
     title: "Herinneringskussens",
@@ -63,7 +59,6 @@ const products: Product[] = [
       "Inclusief binnenkussen en rits aan de onderzijde",
       "Kussens kunnen ook in combinatie met een deken worden gemaakt, passend bij elkaar",
     ],
-    price: "vanaf € 225,-",
   },
   {
     title: "Herinneringstassen",
@@ -77,7 +72,6 @@ const products: Product[] = [
       "Gemaakt met patchwork van één of meerdere kledingstukken",
       "Binnenzijde voorzien van praktische vakken",
     ],
-    price: "vanaf € 795,-",
   },
 ];
 
@@ -135,20 +129,15 @@ export default function ProductenPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="pt-4 border-t border-[var(--color-taupe-100)] space-y-2">
+                <div className="pt-4 border-t border-[var(--color-taupe-100)]">
                   <div className="flex items-center justify-between gap-4">
                     <span className="font-[family-name:var(--font-cormorant)] italic text-xl text-[var(--color-ink)]">
-                      {p.price}
+                      Prijs op aanvraag
                     </span>
                     <Link href="/contact" className="link-underline text-sm tracking-wide">
                       Bespreek de mogelijkheden →
                     </Link>
                   </div>
-                  {p.priceNote && (
-                    <p className="text-xs text-[var(--color-ink-mute)] italic">
-                      {p.priceNote}
-                    </p>
-                  )}
                 </div>
               </div>
             </Reveal>
@@ -258,7 +247,7 @@ export default function ProductenPage() {
             </h3>
             <ul className="space-y-3 text-[15px] leading-relaxed">
               <li>
-                <strong className="text-[var(--color-ink)]">Prijzen zijn richtprijzen.</strong>{" "}
+                <strong className="text-[var(--color-ink)]">Prijs op maat.</strong>{" "}
                 Wat ik voor jou maak hangt af van materiaal, complexiteit en de
                 tijd die er in gaat zitten. Na het gesprek krijg je een
                 offerte.
