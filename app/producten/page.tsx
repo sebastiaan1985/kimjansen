@@ -1,77 +1,117 @@
 import Link from "next/link";
-import ImageCard from "@/components/ImageCard";
 import Ornament from "@/components/Ornament";
 import Reveal from "@/components/Reveal";
+import ProductGallery, { type GalleryImage } from "@/components/ProductGallery";
 
 export const metadata = {
   title: "Producten — Atelier Kim Jansen",
   description:
-    "Herinneringsjasjes, dekens, kussens en tassen, handgemaakt van kleding van wie je dierbaar was. Met maatwerk en zorg & garantie.",
+    "Herinneringsjasjes, dekens, kussens, tassen en kunstwerken, handgemaakt van kleding van wie je dierbaar was. Met vaste totaalprijzen en maatwerk in overleg.",
 };
 
 type Product = {
   title: string;
   sub: string;
   tone: "rose" | "sage" | "taupe" | "cream";
-  pattern: "botanical" | "weave" | "stitch" | "flower";
-  src?: string;
-  body: string;
-  details: string[];
+  images: GalleryImage[];
+  lead?: string;
+  paragraphs: string[];
+  sizes?: { label: string; price: string }[];
+  after?: string[];
+  price: string;
 };
 
 const products: Product[] = [
   {
     title: "Herinneringsjasjes",
-    sub: "Spijker · katoen",
-    tone: "rose" as const,
-    pattern: "botanical" as const,
-    src: "/images/jasje-transparant.png",
-    body: "Een jasje dat een verhaal met zich meedraagt. Een spijkerjasje, blazer of ander katoenen jasje wordt voorzien van zorgvuldig gekozen stukken kleding die een bijzondere betekenis hebben. Door middel van patchwork verwerk ik de stoffen tot een uniek ontwerp dat past bij de persoon die het gaat dragen. Zo ontstaat een draagbare herinnering waarin stoffen, kleuren en details samenkomen.",
-    details: [
-      "Maatwerk in jouw maat",
-      "Knopen, labels of andere details uit de originele kleding kunnen worden verwerkt",
+    sub: "Draagbaar · uniek · persoonlijk",
+    tone: "rose",
+    images: [
+      { src: "/images/jasje-colbert-geheel.jpg", alt: "Herinneringsjasje van colbertstoffen, geheel" },
+      { src: "/images/jasje-colbert-voorkant.jpg", alt: "Herinneringsjasje, voorkant met label Kim Jansen" },
+      { src: "/images/jasje-colbert-zak.jpg", alt: "Herinneringsjasje, detail van de zak met knoopje" },
+      { src: "/images/jasje-colbert-knopen.jpg", alt: "Herinneringsjasje, bloem van originele knopen" },
+      { src: "/images/jasje-transparant.png", alt: "Herinneringsjasje", contain: true },
     ],
+    lead: "Een kledingstuk vol herinneringen, opnieuw tot leven gebracht.",
+    paragraphs: [
+      "Van kleding die gedragen werd door iemand die je dierbaar is, maak ik een nieuw jasje. Verschillende kledingstukken krijgen samen een nieuwe vorm en worden verwerkt tot een uniek kledingstuk.",
+      "Denk bijvoorbeeld aan colbertjes, overhemden of andere kledingstukken die een bijzondere betekenis hebben. Ieder jasje is anders en vertelt zijn eigen verhaal.",
+      "Zo draag je niet alleen een mooie herinnering met je mee, maar ook letterlijk een stukje van degene die je mist.",
+    ],
+    price: "€895",
   },
   {
     title: "Herinneringsdekens",
     sub: "Warm · persoonlijk · samen",
-    tone: "sage" as const,
-    pattern: "weave" as const,
-    src: "/images/deken-producten.png",
-    body: "Een deken waarin herinneringen samenkomen. Overhemden van vader, blouses van moeder, T-shirts van een broer — kleding die te waardevol is om weg te doen, verwerkt in een warm en persoonlijk patchwork. Een herinnering die je kunt vasthouden, om je heen kunt slaan of een mooie plek kunt geven in huis.",
-    details: [
-      "Standaardformaat: 90 × 200 cm (eenpersoons)",
-      "Andere formaten mogelijk in overleg",
-      "Achterzijde katoen, dit kan ook een dekbedovertrek zijn",
+    tone: "sage",
+    images: [{ src: "/images/deken-producten.png", alt: "Herinneringsdeken" }],
+    paragraphs: [
+      "Een deken vol herinneringen, gemaakt van kleding die een bijzondere betekenis heeft. Een overhemd dat je direct herkent, een favoriete blouse of een T-shirt dat je doet denken aan mooie momenten samen.",
+      "De verschillende kledingstukken worden met aandacht samengebracht in een persoonlijk patchwork. Zo ontstaat een unieke deken waarin kleuren, stoffen en herkenbare details samen een verhaal vertellen.",
+      "Een tastbare herinnering om lekker onder weg te kruipen, om je heen te slaan of een mooi plekje te geven in huis.",
     ],
+    sizes: [
+      { label: "100 × 150 cm", price: "€475" },
+      { label: "90 × 200 cm", price: "€595" },
+      { label: "130 × 200 cm", price: "€795" },
+    ],
+    after: [
+      "Andere formaten zijn mogelijk in overleg.",
+      "De achterzijde wordt gemaakt van katoen. Het is ook mogelijk om hiervoor een eigen dekbedovertrek te gebruiken of een andere stof te kiezen.",
+    ],
+    price: "Vanaf €475",
   },
   {
     title: "Herinneringskussens",
     sub: "Klein · dichtbij · zacht",
-    tone: "taupe" as const,
-    pattern: "stitch" as const,
-    src: "/images/kussen-producten.png",
-    body: "Een kussen om vast te houden, tegen je aan te trekken of een mooie plek in huis te geven. Gemaakt van één of meerdere kledingstukken die een bijzondere betekenis hebben. Soms rustig en eenvoudig, soms verwerkt in een patchwork van verschillende stoffen. Altijd met aandacht voor de herinneringen die erin verweven zitten.",
-    details: [
-      "Formaat in overleg",
-      "Patchwork of verwerkt uit één kledingstuk",
-      "Originele knopen, labels of andere details kunnen worden verwerkt",
-      "Inclusief binnenkussen en rits aan de onderzijde",
-      "Kussens kunnen ook in combinatie met een deken worden gemaakt, passend bij elkaar",
+    tone: "taupe",
+    images: [
+      { src: "/images/kussen-overhemd.jpg", alt: "Herinneringskussen gemaakt van een overhemd met borstzakken" },
+      { src: "/images/kussen-producten.png", alt: "Herinneringskussen in patchwork" },
     ],
+    paragraphs: [
+      "Een kussen om vast te houden, tegen je aan te trekken of een mooie plek in huis te geven. Gemaakt van één of meerdere kledingstukken die een bijzondere betekenis hebben.",
+      "Soms ontstaat er een rustig en eenvoudig ontwerp uit één kledingstuk, soms komen verschillende stoffen samen in een persoonlijk patchwork. Bijzondere details, zoals originele knopen, labels of naden, kunnen waar mogelijk behouden blijven en een plek krijgen in het ontwerp.",
+      "Zo ontstaat een uniek kussen waarin dierbare herinneringen op een mooie manier samenkomen.",
+    ],
+    price: "€295",
+  },
+  {
+    title: "Herinneringskussen – Canadees smokwerk",
+    sub: "Patroon · diepte · structuur",
+    tone: "rose",
+    images: [{ src: "/images/kussen-smokwerk.jpg", alt: "Herinneringskussen met Canadees smokwerk" }],
+    lead: "Een bijzondere herinnering, verwerkt in een uniek patroon.",
+    paragraphs: [
+      "Met Canadees smokwerk krijgen dierbare kledingstukken een verrassende nieuwe vorm. Door kleine delen stof op een speciale manier met elkaar te verbinden, ontstaat een bijzonder patroon met diepte, structuur en een speels lijnenspel.",
+      "Verschillende kleuren en stoffen komen samen in een uniek geheel. Zo ontstaat een bijzonder herinneringskussen waarin de oorspronkelijke kleding een nieuw leven krijgt. Een handgemaakt kunstwerk om neer te zetten, op de bank te leggen of een mooie plek in huis te geven.",
+    ],
+    price: "€395",
   },
   {
     title: "Herinneringstassen",
     sub: "Draagbaar · persoonlijk · tijdloos",
-    tone: "cream" as const,
-    pattern: "flower" as const,
-    src: "/images/tas-oma-producten.png",
-    body: "Een tas die je iedere dag met je mee kunt dragen. Gemaakt van kleding die een bijzondere betekenis heeft, verwerkt in een uniek patchwork van herinneringen. Zo krijgen dierbare stoffen een nieuwe plek in het dagelijks leven. Iedere tas wordt op maat ontworpen, passend bij de kleding, de herinneringen en jouw wensen. Originele details zoals knopen, labels, zakken of andere herkenbare elementen kunnen worden verwerkt, zodat het verhaal zichtbaar blijft in het eindresultaat.",
-    details: [
-      "Formaat in overleg",
-      "Gemaakt met patchwork van één of meerdere kledingstukken",
-      "Binnenzijde voorzien van praktische vakken",
+    tone: "cream",
+    images: [{ src: "/images/tas-oma-producten.png", alt: "Herinneringstas" }],
+    paragraphs: [
+      "Een tas die je iedere dag met je mee kunt dragen, gemaakt van kleding die een bijzondere betekenis heeft. Verschillende stoffen en kledingstukken komen samen in een persoonlijk patchwork, waardoor een unieke tas ontstaat met een eigen verhaal.",
+      "Bijzondere details, zoals originele knopen, labels, zakken of herkenbare naden, kunnen waar mogelijk behouden blijven en een plek krijgen in het ontwerp. Zo krijgen dierbare kledingstukken een nieuw leven en draag je een stukje herinnering met je mee.",
+      "Iedere tas wordt met aandacht ontworpen, passend bij de aangeleverde kleding en jouw persoonlijke wensen.",
     ],
+    price: "€350",
+  },
+  {
+    title: "Herinneringskunstwerk in houten lijst",
+    sub: "Klein · persoonlijk · om neer te zetten",
+    tone: "taupe",
+    images: [{ src: "/images/kunstwerk-hart-lijst.jpg", alt: "Hart van reststoffen in een houten lijst" }],
+    lead: "Een kleine herinnering met een bijzondere betekenis.",
+    paragraphs: [
+      "Soms is een klein stukje stof al genoeg om een dierbare herinnering dichtbij te houden. Van reststoffen uit kleding die een bijzondere betekenis heeft, maak ik een persoonlijk kunstwerk in de vorm van bijvoorbeeld een hart of ander herkenbaar symbool.",
+      "De verschillende stoffen krijgen samen een nieuwe vorm en worden met aandacht verwerkt in een houten lijst. Zo ontstaat een uniek en persoonlijk kunstwerk dat een mooi plekje verdient in huis.",
+    ],
+    price: "€145",
   },
 ];
 
@@ -83,17 +123,27 @@ export default function ProductenPage() {
         <div className="container-prose">
           <p className="eyebrow mb-6">Wat ik maak</p>
           <h1 className="display text-4xl md:text-6xl leading-[1.04] max-w-4xl">
-            Vier vormen. En alles wat{" "}
+            Herinneringen krijgen{" "}
             <em className="font-[family-name:var(--font-cormorant)] italic text-[var(--color-rose-300)] font-light">
-              daarnaast nog mogelijk is.
+              een nieuwe vorm.
             </em>
           </h1>
-          <p className="mt-8 max-w-2xl text-[1.05rem] leading-[1.85]">
-            Dit zijn de producten waar de meeste gesprekken bij beginnen. Maar
-            het kan ook iets anders worden, een wandkleed, een babydeken voor
-            een kleinkind, of iets wat nog geen vorm heeft. In het gesprek
-            voelen we wat past.
-          </p>
+          <div className="mt-8 max-w-2xl space-y-5 text-[1.05rem] leading-[1.85]">
+            <p>
+              Van dierbare kleding maak ik persoonlijke herinneringsstukken.
+              Soms begint dat met een deken, een kussen, een tas of een
+              bijzonder kunstwerk. Maar er is nog veel meer mogelijk.
+            </p>
+            <p>
+              Misschien wordt het een wandkleed, een babydeken voor een
+              kleinkind of juist iets heel anders. We kijken samen naar de
+              kleding, de herinneringen en de mogelijkheden.
+            </p>
+            <p>
+              Want niet ieder verhaal past in een vast product. En dat hoeft
+              ook niet.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -101,8 +151,57 @@ export default function ProductenPage() {
         <div className="divider-stitched" />
       </div>
 
+      {/* ONTDEK DE MOGELIJKHEDEN */}
+      <section className="bg-[var(--color-cream-50)] pt-16 md:pt-20">
+        <div className="container-prose">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
+            <div className="space-y-5 text-[1.05rem] leading-[1.85]">
+              <h2 className="display text-3xl md:text-4xl leading-[1.05]">
+                Ontdek de mogelijkheden
+              </h2>
+              <p>
+                Hieronder vind je een aantal herinneringsproducten die ik al
+                eerder heb gemaakt, met de bijbehorende formaten en prijzen. Ze
+                geven je een idee van wat er mogelijk is.
+              </p>
+              <p>
+                Heb je zelf een ander idee of iets in gedachten dat je hier
+                niet tussen ziet staan? Ook dat is welkom. Samen bespreken we
+                de mogelijkheden en kijken we wat bij jouw verhaal past. Voor
+                een product op maat bepalen we in overleg een passende prijs.
+              </p>
+            </div>
+            <div className="rounded-[var(--radius-lg)] border border-[var(--color-taupe-100)] bg-[var(--color-linen)] p-8 md:p-10">
+              <p className="eyebrow mb-4">
+                Wat je bij elk product van mij kan verwachten
+              </p>
+              <p className="text-[15px] leading-relaxed">
+                Bij iedere opdracht horen een{" "}
+                <strong className="text-[var(--color-ink)]">persoonlijk intakegesprek</strong>{" "}
+                en een{" "}
+                <strong className="text-[var(--color-ink)]">afrondend gesprek</strong>{" "}
+                bij de overhandiging. We{" "}
+                <strong className="text-[var(--color-ink)]">bepalen samen het ontwerp</strong>,
+                met aandacht voor{" "}
+                <strong className="text-[var(--color-ink)]">bijzondere details</strong>{" "}
+                en{" "}
+                <strong className="text-[var(--color-ink)]">herkenbare elementen</strong>{" "}
+                uit de oorspronkelijke kleding. Alle{" "}
+                <strong className="text-[var(--color-ink)]">benodigde materialen zijn inbegrepen</strong>{" "}
+                en ieder product wordt met zorg en volledig met de hand{" "}
+                <strong className="text-[var(--color-ink)]">door mij gemaakt</strong>.
+              </p>
+              <p className="mt-5 text-[15px] leading-relaxed font-semibold text-[var(--color-ink)]">
+                De prijzen op de website zijn totaalprijzen, zonder bijkomende
+                kosten achteraf.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PRODUCT BLOCKS */}
-      <section className="bg-[var(--color-cream-50)] pt-16 md:pt-24 pb-12">
+      <section className="bg-[var(--color-cream-50)] pt-20 md:pt-28 pb-12">
         <div className="container-prose space-y-24 md:space-y-32">
           {products.map((p, i) => (
             <Reveal
@@ -113,26 +212,47 @@ export default function ProductenPage() {
               }`}
             >
               <div>
-                <ImageCard tone={p.tone} pattern={p.pattern} aspect="wide" src={p.src} alt={p.title} blend={p.title === "Herinneringsjasjes"} />
+                <ProductGallery images={p.images} tone={p.tone} />
               </div>
               <div>
                 <p className="eyebrow mb-3">{p.sub}</p>
                 <h2 className="display text-3xl md:text-4xl leading-[1.05] mb-5">
                   {p.title}
                 </h2>
-                <p className="leading-[1.85] mb-6">{p.body}</p>
-                <ul className="space-y-2 mb-6">
-                  {p.details.map((d) => (
-                    <li key={d} className="flex items-start gap-3 text-[15px]">
-                      <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[var(--color-rose-300)] shrink-0" />
-                      <span className="text-[var(--color-ink-soft)]">{d}</span>
-                    </li>
+                {p.lead && (
+                  <p className="font-[family-name:var(--font-cormorant)] italic text-xl md:text-2xl text-[var(--color-ink)] leading-snug mb-5">
+                    {p.lead}
+                  </p>
+                )}
+                <div className="space-y-4 leading-[1.85] mb-6">
+                  {p.paragraphs.map((t) => (
+                    <p key={t}>{t}</p>
                   ))}
-                </ul>
+                </div>
+                {p.sizes && (
+                  <div className="mb-6">
+                    <p className="eyebrow mb-3">Formaten en prijzen</p>
+                    <ul className="divide-y divide-[var(--color-taupe-100)] border-y border-[var(--color-taupe-100)]">
+                      {p.sizes.map((s) => (
+                        <li key={s.label} className="flex items-center justify-between py-2.5 text-[15px]">
+                          <span className="text-[var(--color-ink-soft)]">{s.label}</span>
+                          <span className="font-medium text-[var(--color-ink)]">{s.price}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {p.after && (
+                  <div className="space-y-3 text-[15px] leading-relaxed text-[var(--color-ink-soft)] mb-6">
+                    {p.after.map((t) => (
+                      <p key={t}>{t}</p>
+                    ))}
+                  </div>
+                )}
                 <div className="pt-4 border-t border-[var(--color-taupe-100)]">
                   <div className="flex items-center justify-between gap-4">
-                    <span className="font-[family-name:var(--font-cormorant)] italic text-xl text-[var(--color-ink)]">
-                      Prijs op aanvraag
+                    <span className="font-[family-name:var(--font-cormorant)] italic text-2xl text-[var(--color-ink)]">
+                      {p.price}
                     </span>
                     <Link href="/contact" className="link-underline text-sm tracking-wide">
                       Bespreek de mogelijkheden →
@@ -142,6 +262,39 @@ export default function ProductenPage() {
               </div>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      {/* IN ONTWIKKELING */}
+      <section className="bg-[var(--color-cream-50)] pb-12">
+        <div className="container-prose max-w-3xl">
+          <Reveal className="rounded-[var(--radius-lg)] border border-dashed border-[var(--color-taupe-200)] bg-white/50 p-8 md:p-10">
+            <p className="eyebrow mb-3">In ontwikkeling</p>
+            <h2 className="display text-2xl md:text-3xl leading-[1.1] mb-5">
+              Kleding voor een natuurlijk afscheid
+            </h2>
+            <div className="space-y-4 text-[15px] leading-relaxed">
+              <p>
+                Naast het maken van herinneringsproducten ben ik bezig met een
+                nieuwe uitbreiding binnen Atelier Kim Jansen: het maken en
+                vermaken van kleding voor een natuurlijk afscheid.
+              </p>
+              <p>
+                Hierbij werk ik met natuurlijke materialen, zoals linnen en
+                katoen, en besteed ik aandacht aan details die passen bij een
+                natuurbegrafenis. Denk aan kleding zonder ritsen, kunststof
+                knopen of andere niet-natuurlijke onderdelen.
+              </p>
+              <p>
+                Een laatste kledingstuk, met aandacht en respect voor zowel de
+                mens als de natuur.
+              </p>
+              <p>De mogelijkheden en wensen bespreek ik graag persoonlijk.</p>
+            </div>
+            <Link href="/contact" className="inline-block mt-6 link-underline text-sm tracking-wide">
+              Neem contact op →
+            </Link>
+          </Reveal>
         </div>
       </section>
 
@@ -247,10 +400,10 @@ export default function ProductenPage() {
             </h3>
             <ul className="space-y-3 text-[15px] leading-relaxed">
               <li>
-                <strong className="text-[var(--color-ink)]">Prijs op maat.</strong>{" "}
-                Wat ik voor jou maak hangt af van materiaal, complexiteit en de
-                tijd die er in gaat zitten. Na het gesprek krijg je een
-                offerte.
+                <strong className="text-[var(--color-ink)]">Totaalprijzen.</strong>{" "}
+                De prijzen bij de producten zijn totaalprijzen, zonder
+                bijkomende kosten achteraf. Heb je een ander idee? Dan bepalen
+                we in overleg een passende prijs.
               </li>
               <li>
                 <strong className="text-[var(--color-ink)]">Wachttijd:</strong>{" "}

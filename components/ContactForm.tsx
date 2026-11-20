@@ -48,25 +48,14 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <Field label="Telefoon (optioneel)" name="phone" type="tel" />
-
-      <FieldSelect
-        label="Wat heb je in gedachten?"
-        name="product"
-        options={[
-          "Herinneringsdeken",
-          "Kussen",
-          "Jasje",
-          "Tas",
-        ]}
-      />
+      <Field label="Telefoon" name="phone" type="tel" required />
 
       <div>
         <FieldTextarea
-          label="Vertel me iets meer"
+          label="Jouw verhaal"
           hint="Voor wie? Welke kleding heb je in gedachten? Schrijf gerust een paar zinnen of een hele bladzijde, wat goed voelt."
           name="message"
-          rows={6}
+          rows={8}
           required
         />
         <ValidationError
@@ -76,6 +65,12 @@ export default function ContactForm() {
           className="text-red-600 text-xs mt-1"
         />
       </div>
+
+      <FieldSelect
+        label="Hoe wil je dat ik contact met je opneem?"
+        name="contactvoorkeur"
+        options={["Bellen", "WhatsApp", "E-mail"]}
+      />
 
       <FieldSelect
         label="Voorkeur voor het gesprek"

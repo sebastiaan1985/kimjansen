@@ -144,24 +144,31 @@ export default function HomePage() {
             <div>
               <p className="eyebrow mb-4">Wat ik maak</p>
               <h2 className="display text-3xl md:text-5xl max-w-xl leading-[1.05]">
-                Vier vormen. Eindeloze mogelijkheden.
+                Herinneringen krijgen{" "}
+                <em className="font-[family-name:var(--font-cormorant)] italic text-[var(--color-rose-300)] font-light">
+                  een nieuwe vorm.
+                </em>
               </h2>
             </div>
             <p className="max-w-md text-[var(--color-ink-soft)]">
-              Dit is waar we van starten. In het gesprek kan het iets anders
-              worden — wat past, wat raakt. Jij kiest. Of je laat mij kiezen.
+              Van dierbare kleding maak ik persoonlijke herinneringsstukken.
+              Soms begint dat met een deken, een kussen, een tas of een
+              bijzonder kunstwerk. Maar er is nog veel meer mogelijk. Want niet
+              ieder verhaal past in een vast product. En dat hoeft ook niet.
             </p>
           </Reveal>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              { title: "Jasjes", desc: "Spijker of katoen, voorzien van patchwork van bijzondere kleding. Een draagbare herinnering.", tone: "rose" as const, pattern: "botanical" as const, src: "/images/jasje-transparant.png" },
-              { title: "Dekens", desc: "Een warm patchwork van overhemden, blouses en T-shirts. Om je heen, of een plek in huis.", tone: "sage" as const, pattern: "weave" as const, src: "/images/deken.jpg" },
-              { title: "Kussens", desc: "Klein, dichtbij. Om aan vast te houden, op de bank, of mee te slapen.", tone: "taupe" as const, pattern: "stitch" as const, src: "/images/kussens-homepage.jpeg" },
-              { title: "Tassen", desc: "Een patchwork-tas die je elke dag mee kunt nemen. Met praktische vakken aan de binnenkant.", tone: "cream" as const, pattern: "flower" as const, src: "/images/tassen-homepage.jpeg" },
+              { title: "Jasjes", alt: "Herinneringsjasje", desc: "Van dierbare kleding een nieuw jasje. Ieder jasje is anders en vertelt zijn eigen verhaal.", tone: "rose" as const, pattern: "botanical" as const, src: "/images/jasje-colbert-geheel.jpg" },
+              { title: "Dekens", alt: "Herinneringsdeken", desc: "Een warm patchwork van overhemden, blouses en T-shirts. Om je heen, of een plek in huis.", tone: "sage" as const, pattern: "weave" as const, src: "/images/deken.jpg" },
+              { title: "Kussens", alt: "Herinneringskussens", desc: "Klein, dichtbij. Om aan vast te houden, op de bank, of mee te slapen.", tone: "taupe" as const, pattern: "stitch" as const, src: "/images/kussens-homepage.jpeg" },
+              { title: "Canadees smokwerk", alt: "Herinneringskussen met Canadees smokwerk", desc: "Een kussen met een bijzonder patroon vol diepte, structuur en een speels lijnenspel.", tone: "rose" as const, pattern: "stitch" as const, src: "/images/kussen-smokwerk.jpg" },
+              { title: "Tassen", alt: "Herinneringstassen", desc: "Een patchwork-tas die je elke dag mee kunt nemen. Met praktische vakken aan de binnenkant.", tone: "cream" as const, pattern: "flower" as const, src: "/images/tassen-homepage.jpeg" },
+              { title: "Kunstwerk in lijst", alt: "Herinneringskunstwerk in houten lijst", desc: "Een klein stukje stof, verwerkt tot een persoonlijk kunstwerk in een houten lijst.", tone: "taupe" as const, pattern: "flower" as const, src: "/images/kunstwerk-hart-lijst.jpg" },
             ].map((p, i) => (
-              <Reveal key={p.title} as="article" delay={i * 80} className="group">
-                <ImageCard tone={p.tone} pattern={p.pattern} aspect="portrait" src={p.src} alt={`Herinnerings${p.title.toLowerCase()} van Atelier Kim Jansen`} blend={p.title === "Jasjes"} />
+              <Reveal key={p.title} as="article" delay={(i % 3) * 80} className="group">
+                <ImageCard tone={p.tone} pattern={p.pattern} aspect="portrait" src={p.src} alt={`${p.alt} van Atelier Kim Jansen`} />
                 <h3 className="display text-2xl mt-5 mb-2">{p.title}</h3>
                 <p className="text-sm leading-relaxed">{p.desc}</p>
               </Reveal>

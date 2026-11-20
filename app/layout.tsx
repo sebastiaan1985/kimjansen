@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.atelierkimjansen.nl"),
   title: "Atelier Kim Jansen — Herinneringen om vast te houden",
   description:
-    "Persoonlijke herinneringsproducten van Kim Jansen. Van geliefde kleding maken we een jasje, deken, kussen of sjaal — een tastbare herinnering aan wie je dierbaar was.",
+    "Persoonlijke herinneringsproducten van Kim Jansen. Van geliefde kleding maken we een jasje, deken, kussen, tas of kunstwerk — een tastbare herinnering aan wie je dierbaar was.",
   openGraph: {
     title: "Atelier Kim Jansen",
     description:
@@ -60,7 +60,7 @@ const businessJsonLd = {
   "@id": "https://www.atelierkimjansen.nl/#business",
   name: "Atelier Kim Jansen",
   description:
-    "Persoonlijke herinneringsproducten gemaakt van geliefde kleding — jasjes, dekens, kussens en sjaals voor wie iemand heeft verloren.",
+    "Persoonlijke herinneringsproducten gemaakt van geliefde kleding — jasjes, dekens, kussens, tassen en kunstwerken voor wie iemand heeft verloren.",
   url: "https://www.atelierkimjansen.nl",
   telephone: "+31625145304",
   email: "info@atelierkimjansen.nl",
