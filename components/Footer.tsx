@@ -27,7 +27,7 @@ export default function Footer() {
             <li><Link href="/over" className="link-underline">Over Kim</Link></li>
             <li><Link href="/producten" className="link-underline">Producten</Link></li>
             <li><Link href="/werkwijze" className="link-underline">Werkwijze</Link></li>
-            <li><Link href="/portfolio" className="link-underline">Portfolio</Link></li>
+            <li><Link href="/portfolio" className="link-underline">Inspiratie</Link></li>
             <li><Link href="/contact" className="link-underline">Contact</Link></li>
           </ul>
         </div>

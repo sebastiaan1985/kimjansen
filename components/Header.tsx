@@ -9,7 +9,7 @@ const links = [
   { href: "/over", label: "Over Kim" },
   { href: "/producten", label: "Producten" },
   { href: "/werkwijze", label: "Werkwijze" },
-  { href: "/portfolio", label: "Portfolio" },
+  { href: "/portfolio", label: "Inspiratie" },
   { href: "/contact", label: "Contact" },
 ];
 

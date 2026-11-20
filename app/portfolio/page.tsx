@@ -169,10 +169,10 @@ export default function PortfolioPage() {
           </div>
           <div className="grid grid-cols-3 gap-3">
             <ImageCard tone="rose" pattern="botanical" aspect="square" src="/images/tas-collega-detail.jpg" alt="Detail van een herinneringstas met teddybeertjes" />
-            <ImageCard tone="sage" pattern="weave" aspect="square" className="mt-6" src="/images/jasje-detail.jpg" alt="Borduurdetail op een herinneringsjasje" blend />
+            <ImageCard tone="sage" pattern="weave" aspect="square" className="mt-6" src="/images/jasje-colbert-knopen.jpg" alt="Bloem van originele knopen op een herinneringsjasje" />
             <ImageCard tone="taupe" pattern="stitch" aspect="square" src="/images/tas-disney.jpg" alt="Herinneringstas met hartmotief" />
-            <ImageCard tone="cream" pattern="flower" aspect="square" className="mt-6" src="/images/jasje-label.jpg" alt="Custom made by Kim Jansen label" objectPosition="center" />
-            <ImageCard tone="rose" pattern="flower" aspect="square" src="/images/kim-atelier.jpg" alt="Kim aan het werk in haar atelier" />
+            <ImageCard tone="cream" pattern="flower" aspect="square" className="mt-6" src="/images/jasje-colbert-voorkant.jpg" alt="Herinneringsjasje met label Kim Jansen" objectPosition="center" />
+            <ImageCard tone="rose" pattern="flower" aspect="square" src="/images/kim-naaimachine.jpg" alt="Kim aan het werk achter haar naaimachine" objectPosition="40% 30%" />
             <ImageCard tone="sage" pattern="botanical" aspect="square" className="mt-6" src="/images/tas-christina.jpg" alt="Patchworktas in het veld" />
           </div>
         </div>
