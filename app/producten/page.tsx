@@ -31,7 +31,6 @@ const products: Product[] = [
       { src: "/images/jasje-colbert-voorkant.jpg", alt: "Herinneringsjasje, voorkant met label Kim Jansen" },
       { src: "/images/jasje-colbert-zak.jpg", alt: "Herinneringsjasje, detail van de zak met knoopje" },
       { src: "/images/jasje-colbert-knopen.jpg", alt: "Herinneringsjasje, bloem van originele knopen" },
-      { src: "/images/jasje-transparant.png", alt: "Herinneringsjasje", contain: true },
     ],
     lead: "Een kledingstuk vol herinneringen, opnieuw tot leven gebracht.",
     paragraphs: [
@@ -66,10 +65,7 @@ const products: Product[] = [
     title: "Herinneringskussens",
     sub: "Klein · dichtbij · zacht",
     tone: "taupe",
-    images: [
-      { src: "/images/kussen-overhemd.jpg", alt: "Herinneringskussen gemaakt van een overhemd met borstzakken" },
-      { src: "/images/kussen-producten.png", alt: "Herinneringskussen in patchwork" },
-    ],
+    images: [{ src: "/images/kussen-producten.png", alt: "Herinneringskussen in patchwork" }],
     paragraphs: [
       "Een kussen om vast te houden, tegen je aan te trekken of een mooie plek in huis te geven. Gemaakt van één of meerdere kledingstukken die een bijzondere betekenis hebben.",
       "Soms ontstaat er een rustig en eenvoudig ontwerp uit één kledingstuk, soms komen verschillende stoffen samen in een persoonlijk patchwork. Bijzondere details, zoals originele knopen, labels of naden, kunnen waar mogelijk behouden blijven en een plek krijgen in het ontwerp.",
@@ -81,7 +77,10 @@ const products: Product[] = [
     title: "Herinneringskussen – Canadees smokwerk",
     sub: "Patroon · diepte · structuur",
     tone: "rose",
-    images: [{ src: "/images/kussen-smokwerk.jpg", alt: "Herinneringskussen met Canadees smokwerk" }],
+    images: [
+      { src: "/images/kussen-smokwerk.jpg", alt: "Herinneringskussen met Canadees smokwerk" },
+      { src: "/images/kussen-overhemd.jpg", alt: "Herinneringskussen Canadees smokwerk, andere zijde van overhemdstof" },
+    ],
     lead: "Een bijzondere herinnering, verwerkt in een uniek patroon.",
     paragraphs: [
       "Met Canadees smokwerk krijgen dierbare kledingstukken een verrassende nieuwe vorm. Door kleine delen stof op een speciale manier met elkaar te verbinden, ontstaat een bijzonder patroon met diepte, structuur en een speels lijnenspel.",
